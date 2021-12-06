@@ -7,41 +7,121 @@
   <title>Document</title>
 </head>
 <body>
-      <!-- Шапка сайта -->
-      <header class="header">
-        <div class="header__container container">
+  <!-- Шапка сайта -->
+  <header class="header">
+    <div class="header__container container">
 
-          <!-- Лого -->
-          <a class="header__logo-link logo-link" href="#">
-            <span class="visually-hidden">логотип сайта</span>
-            <img class="header__logo-cat logo-cat" src="img/logo/logo-mobile.svg" width="33" height="38" alt="логотип сайта графический">
-            <img class="header__logo-text logo-text" src="img/logo/text-logo.svg" width="101" height="19" alt="логотип сайта текстовый">
-          </a>
+      <!-- Лого -->
+      <a class="header__logo-link logo-link" href="#">
+        <span class="visually-hidden">логотип сайта</span>
+        <img class="header__logo-cat logo-cat" src="img/logo/logo-mobile.svg" width="33" height="38" alt="логотип сайта графический">
+        <img class="header__logo-text logo-text" src="img/logo/text-logo.svg" width="101" height="19" alt="логотип сайта текстовый">
+      </a>
 
-          <!-- Навигация по сайту -->
-          <nav class="nav-main">
-            <!-- Бургер -->
-            <button class="nav__toggle" type="button">
-              <span class="visually-hidden">открыть-скрыть меню</span>
-            </button>
+      <!-- Навигация по сайту -->
+      <nav class="nav-main">
+        <!-- Бургер -->
+        <button class="nav__toggle" type="button">
+          <span class="visually-hidden">открыть-скрыть меню</span>
+        </button>
 
-            <!-- Список меню -->
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a class="nav__link" href="index.html">Главная</a>
-              </li>
+        <!-- Список меню -->
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="index.html">Главная</a>
+          </li>
 
-              <li class="nav__item">
-                <a class="nav__link" href="catalog.html">Каталог продукции</a>
-              </li>
+          <li class="nav__item">
+            <a class="nav__link" href="catalog.html">Каталог продукции</a>
+          </li>
 
-              <li class="nav__item">
-                <a class="nav__link nav__link--active">Подбор программы</a>
-              </li>
-            </ul>
-          </nav>
-        </div> <!-- /container -->
-      </header>
+          <li class="nav__item">
+            <a class="nav__link nav__link--active">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </div> <!-- /container -->
+  </header>
+
+  <main>
+    <h1 class="main__title">Подбор программы</h1>
+    <p class="subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+
+    <form class="program" action="https://echo.htmlacademy.ru/" name="program" method="post">
+
+      <!-- Характеристики кота -->
+      <fieldset>
+        <legend class="visually-hidden">Характеристики кота</legend>
+
+        <label>
+          <span>ИМЯ:*</span>
+          <input type="text" name="cat-name" required>
+        </label>
+
+        <label>
+          <span>Вес (кг):*</span>
+          <input type="text" name="cat-weight" required>
+        </label>
+
+        <label>
+          <span>Возраст (лет):</span>
+          <input type="text" name="cat-age">
+        </label>
+      </fieldset>
+
+      <!-- Требуемые характеристики -->
+      <fieldset>
+        <legend class="visually-hidden">Требуемые характеристики</legend>
+
+        <label>
+          <input type="radio" name="required" checked>
+          <span></span>
+          <span>Похудение</span>
+        </label>
+
+        <label>
+          <input type="radio" name="required">
+          <span></span>
+          <span>Набор массы</span>
+        </label>
+
+        <label>
+          <input type="radio" name="required">
+          <span></span>
+          <span>Не знаю (Нужен ваш совет)</span>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Контактные данные (владельца кота)</legend>
+
+        <label>
+          <span>E-mail:*</span>
+          <input type="email" name="email" required>
+        </label>
+
+        <label>
+          <span>Телефон:*</span>
+          <input type="tel" name="telephone" required>
+        </label>
+      </fieldset>
+
+
+
+
+
+
+
+
+
+
+
+    </form>
+
+
+  </main>
+
+
 
 </body>
 </html>
