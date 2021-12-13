@@ -1,0 +1,16 @@
+.header {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.header .container {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Список меню
+.nav__list {
+  display: none;
+}

@@ -1,0 +1,58 @@
+.promo {
+  position: relative;
+}
+
+.promo__wrapper {
+  background-color: $color-basic-green;
+}
+
+.promo__image {
+  opacity: .2;
+  display: block;
+}
+
+.promo__info {
+  position: absolute;
+  width: auto;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.promo__title {
+  font-size: 36px;
+  font-weight: 400;
+  color: $color-white;
+  line-height: 36px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.promo__slogan {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-white;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+}
+
+.promo__pack {
+  display: block;
+  margin: 30px auto 0;
+  margin-top: -200px;
+  position: relative;
+  z-index: 20;
+}
+
+.promo__button {
+  color: $color-white;
+  text-decoration: none;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

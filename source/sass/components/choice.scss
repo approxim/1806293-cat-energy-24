@@ -1,0 +1,60 @@
+.choice__wrapper {
+  background-color: $color-basic-grey;
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  img {
+    margin-right: 19px;
+  }
+}
+
+.choice__title {
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: $color-black;
+  margin: 0;
+}
+
+.choice__description {
+  font-family: $font-secondary;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-special-dark-grey;
+  position: relative;
+  margin: 19px 0 0;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -21px;
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 1px;
+  }
+}
+
+.choice__link {
+  margin-top: 42px;
+  display: block;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-black;
+  position: relative;
+
+  &:after {
+    content: url("../../img/icons/arrow.svg");
+    display: block;
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+  }
+}

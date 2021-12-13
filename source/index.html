@@ -2,6 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
@@ -9,13 +11,16 @@
 
     <!-- Шапка сайта -->
     <header class="header">
-      <div class="header__container container">
+      <div class="container header__container">
 
         <!-- Лого -->
-        <a class="logo-link header__logo-link" href="#">
+        <a class="logo-link" href="#">
           <span class="visually-hidden">логотип сайта</span>
           <img class="logo-cat header__logo-cat" src="img/logo/logo-mobile.svg" width="33" height="38" alt="логотип сайта графический">
-          <img class="logo-text header__logo-text" src="img/logo/text-logo.svg" width="101" height="19" alt="логотип сайта текстовый">
+        </a>
+
+        <a class="logo-text" href="#">
+          <img class="logo-text__img" src="img/logo/text-logo.svg" width="101" height="19" alt="логотип сайта текстовый">
         </a>
 
         <!-- Навигация по сайту -->
@@ -45,35 +50,49 @@
 
     <!-- Основное содержимое -->
     <main class="page-main">
-      <div class="container">
-        <h1 class="visually-hidden">Магазин функционального питания для котов</h1>
+      <h1 class="visually-hidden">Магазин функционального питания для котов</h1>
+
 
         <!-- Секция Промо -->
         <section class="promo">
-          <h2 class="promo__title">Функциональное питание для котов</h2>
-          <p class="promo__slogan">Занялся собой? Займись котом!</p>
-          <a class="promo__button green-button" href="form.html">Подобрать программу</a>
+
+          <div class="promo__wrapper">
+            <img class="promo__image" src="img/index-background-mobile.webp" alt="сытый довольный кот" width="100%" height="auto">
+          </div>
+
+          <div class="container">
+            <div class="promo__info">
+              <h2 class="promo__title">Функциональное питание для котов</h2>
+              <p class="promo__slogan">Занялся собой? Займись котом!</p>
+            </div>
+
+            <img class="promo__pack" src="img/index-cat-mobile.webp" alt="упаковка корма" width="80%" height="auto">
+            <a class="promo__button green-button" href="form.html">Подобрать программу</a>
+          </div>
+
         </section> <!-- /Секция Промо -->
 
         <!-- Секция Выбор программы -->
         <section class="choice">
-          <h2 class="visually-hidden">Выбор программы питания</h2>
+          <div class="container">
+            <h2 class="visually-hidden">Выбор программы питания</h2>
 
-          <!-- Похудение -->
-          <div class="choice__slimming">
-            <img src="img/icons/cat-slim-icon.svg" width="50" height="53" alt="иконка худого кота">
-            <h3 class="choice__title">Похудение</h3>
-            <p class="choice__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="choice__link" href="#">Каталог slim</a>
-          </div>
+            <!-- Похудение -->
+            <div class="choice__slimming choice__wrapper">
+              <img src="img/icons/cat-slim-icon.svg" width="50" height="53" alt="иконка худого кота">
+              <h3 class="choice__title">Похудение</h3>
+              <p class="choice__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+              <a class="choice__link" href="#">Каталог slim</a>
+            </div>
 
-          <!-- Набор массы -->
-          <div class="weight-gain">
-            <img src="img/icons/cat-mass-icon.svg" width="67" height="50" alt="иконка худого кота">
-            <h3 class="choice__title">Набор массы</h3>
-            <p class="choice__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="choice__link" href="#">Каталог pro</a>
-          </div>
+            <!-- Набор массы -->
+            <div class="weight-gain choice__wrapper">
+              <img src="img/icons/cat-mass-icon.svg" width="67" height="50" alt="иконка худого кота">
+              <h3 class="choice__title">Набор массы</h3>
+              <p class="choice__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+              <a class="choice__link" href="#">Каталог pro</a>
+            </div>
+          </div> <!-- /container -->
         </section> <!-- /Секция Выбор программы -->
 
         <!-- Секция Как это работает -->
@@ -122,8 +141,8 @@
           </p>
 
           <div class="result">
-            <img class="result__image fat-cat" src="img/fat-cat.png" width="280" height="232" alt="кот до приема правильного корма">
-            <img class="result__image slim-cat" src="img/slim-cat.png" width="243" height="232" alt="кот после приема правильного корма">
+            <img class="result__image fat-cat" src="img/fat-cat-mobile.webp" width="280" height="232" alt="кот до приема правильного корма">
+            <img class="result__image slim-cat" src="img/slim-cat-mobile.webp" width="243" height="232" alt="кот после приема правильного корма">
             <div class="result__buttons ">
               <button class="result__button-before" type="button">Было</button>
               <div class="result__range">
@@ -149,18 +168,16 @@
 
           <!-- Карта -->
           <div class="location__map">
-            <img class="location__map-image" src="img/map-location.webp" alt="карта с местоположением" width="320" height="362">
+            <img class="location__map-image" src="img/map-location-mobile.webp" alt="карта с местоположением" width="320" height="362">
             <img class="location__map-pin" src="img/logo/map-pin-logo.webp" alt="пин нан карте" width="57" height="53">
           </div>
         </section>
-      </div> <!-- /container -->
     </main>
 
     <!-- Подвал сайта  -->
     <footer class="footer__container footer">
-      <h2 class="visually-hidden">Наши контакты</h2>
-
       <div class="container">
+        <h2 class="visually-hidden">Наши контакты</h2>
 
         <!-- Текстовый логотип -->
         <a class="footer__logo-link logo-link" href="#">

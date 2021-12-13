@@ -1,3 +1,9 @@
+// global
+@import "./global/variables.scss";
 @import "./global/fonts.scss";
 @import "./global/global.scss";
 
+// components
+@import "././components/header.scss";
+@import "././components/promo.scss";
+@import "././components/choice.scss";

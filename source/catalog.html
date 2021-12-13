@@ -13,10 +13,13 @@
     <div class="header__container container">
 
       <!-- Лого -->
-      <a class="header__logo-link logo-link" href="#">
+      <a class="logo-link" href="index.html">
         <span class="visually-hidden">логотип сайта</span>
-        <img class="header__logo-cat logo-cat" src="img/logo/logo-mobile.svg" width="33" height="38" alt="логотип сайта графический">
-        <img class="header__logo-text logo-text" src="img/logo/text-logo.svg" width="101" height="19" alt="логотип сайта текстовый">
+        <img class="logo-cat header__logo-cat" src="img/logo/logo-mobile.svg" width="33" height="38" alt="логотип сайта графический">
+      </a>
+
+      <a class="logo-text" href="index.html">
+        <img class="logo-text__img" src="img/logo/text-logo.svg" width="101" height="19" alt="логотип сайта текстовый">
       </a>
 
       <!-- Навигация по сайту -->
@@ -45,7 +48,9 @@
   </header>
 
   <main class="page-main">
-    <h1 class="main__title">Каталог продукции</h1>
+    <div class="container">
+      <h1 class="main__title">Каталог продукции</h1>
+    </div>
 
     <!-- Основные товары -->
     <section class="basic-products">
@@ -258,30 +263,31 @@
 
     <!-- Местоположение -->
     <section class="location--catalog location">
-      <h2 class="visially-hidden">Наше местоположение</h2>
+      <div class="container">
+        <h2 class="visially-hidden">Наше местоположение</h2>
 
-      <!-- Адрес -->
-      <div class="location__wrap">
-        <p class="location__text">Приглашаем к сотрудничеству дилеров</p>
-        <p class="location__address">
-          <span>ул. Большая Конюшенная, д. 19/8</span>
-          <span>Санкт-Петербург</span>
-        </p>
-      </div>
+        <!-- Адрес -->
+        <div class="location__wrap">
+          <p class="location__text">Приглашаем к сотрудничеству дилеров</p>
+          <p class="location__address">
+            <span>ул. Большая Конюшенная, д. 19/8</span>
+            <span>Санкт-Петербург</span>
+          </p>
+        </div>
 
-      <!-- Карта -->
-      <div class="location__map">
-        <img class="location__map-image" src="img/map-location.webp" alt="карта с местоположением" width="320" height="362">
-        <img class="location__map-pin" src="img/logo/map-pin-logo.webp" alt="пин нан карте" width="57" height="53">
-      </div>
+        <!-- Карта -->
+        <div class="location__map">
+          <img class="location__map-image" src="img/map-location.webp" alt="карта с местоположением" width="320" height="362">
+          <img class="location__map-pin" src="img/logo/map-pin-logo.webp" alt="пин нан карте" width="57" height="53">
+        </div>
+      </div> <!-- /container -->
     </section> <!-- location -->
   </main>
 
   <!-- Подвал сайта  -->
   <footer class="footer__container footer">
-    <h2 class="visually-hidden">Наши контакты</h2>
-
     <div class="container">
+      <h2 class="visually-hidden">Наши контакты</h2>
 
       <!-- Текстовый логотип -->
       <a class="footer__logo-link logo-link" href="#">
