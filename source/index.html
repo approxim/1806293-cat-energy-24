@@ -97,91 +97,101 @@
 
         <!-- Секция Как это работает -->
         <section class="working">
-          <h2 class="working__title">Как это работает</h2>
+          <div class="container">
+            <h2 class="working__title">Как это работает</h2>
 
-          <ul class="working__list">
-            <li class="working__item">
-              <img src="img/icons/working-icon-1.svg" alt="только полезные вещества" width="60" height="60">
-              <p class="working__description">Функциональное питание содержит только полезные питательные вещества.</p>
-            </li>
+            <ul class="working__list">
+              <li class="working__item">
+                <img src="img/icons/working-icon-1.svg" alt="только полезные вещества" width="60" height="60">
+                <p class="working__description">Функциональное питание содержит только полезные питательные вещества.</p>
+              </li>
 
-            <li class="working__item">
-              <img src="img/icons/working-icon-2.svg" alt="залей кипятком и готово" width="60" height="60">
-              <p class="working__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
-            </li>
+              <li class="working__item">
+                <img src="img/icons/working-icon-2.svg" alt="залей кипятком и готово" width="60" height="60">
+                <p class="working__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+              </li>
 
-            <li class="working__item">
-              <img src="img/icons/working-icon-3.svg" alt="замена на наше питание" width="60" height="60">
-              <p class="working__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
-            </li>
+              <li class="working__item">
+                <img src="img/icons/working-icon-3.svg" alt="замена на наше питание" width="60" height="60">
+                <p class="working__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
+              </li>
 
-            <li class="working__item">
-              <img src="img/icons/working-icon-4.svg" alt="изменения уже через месяц" width="60" height="60">
-              <p class="working__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-            </li>
-          </ul>
+              <li class="working__item">
+                <img src="img/icons/working-icon-4.svg" alt="изменения уже через месяц" width="60" height="60">
+                <p class="working__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+              </li>
+            </ul>
+          </div> <!-- container -->
         </section> <!-- /Секция Как это работает -->
 
         <!-- Секция Живой пример -->
         <section class="example">
-          <h2 class="example__title">Живой пример</h2>
-          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-
-          <dl class="example__profit">
-            <dt>5кг</dt>
-            <dd>снижение веса</dd>
-
-            <dt>60 дней</dt>
-            <dd>затрачено времени</dd>
-          </dl>
-
-          <p class="example__expenses">
-            <span>Затраты на питание:</span>
-            <span>15 000 РУБ.</span>
-          </p>
-
-          <div class="result">
-            <img class="result__image fat-cat" src="img/fat-cat-mobile.webp" width="280" height="232" alt="кот до приема правильного корма">
-            <img class="result__image slim-cat" src="img/slim-cat-mobile.webp" width="243" height="232" alt="кот после приема правильного корма">
-            <div class="result__buttons ">
-              <button class="result__button-before" type="button">Было</button>
-              <div class="result__range">
-                <button class="result__button-toggle" type="button"></button>
-              </div>
-              <button class="result__button-after" type="button">Стало</button>
+          <div class="container">
+            <h2 class="example__title">Живой пример</h2>
+            <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="example__profit">
+              <dl>
+                <dt>5кг</dt>
+                <dd>снижение веса</dd>
+              </dl>
+              <dl>
+                <dt>60 дней</dt>
+                <dd>затрачено времени</dd>
+              </dl>
             </div>
-          </div> <!-- /result -->
+            <p class="example__expenses">
+              <span>Затраты на питание:</span>
+              <span>15 000 РУБ.</span>
+            </p>
+
+
+            <div class="result">
+              <div class="result__wrapper">
+                <img class="result__image fat-cat" src="img/fat-cat-mobile.webp" width="280" height="232" alt="кот до приема правильного корма">
+                <img class="result__image slim-cat" src="img/slim-cat-mobile.webp" width="243" height="232" alt="кот после приема правильного корма">
+              </div>
+              <div class="result__buttons">
+                <button class="result__button-before" type="button">Было</button>
+                <div class="result__range">
+                  <button class="result__button-toggle" type="button"></button>
+                </div>
+                <button class="result__button-after" type="button">Стало</button>
+              </div>
+            </div> <!-- /result -->
+          </div> <!-- /container -->
         </section> <!-- /Секция Живой пример -->
 
         <!-- Местоположение -->
         <section class="location--index location">
-          <h2 class="visially-hidden">Наше местоположение</h2>
+          <h2 class="visually-hidden">Наше местоположение</h2>
 
           <!-- Адрес -->
-          <div class="location__wrap">
-            <p class="location__text">Приглашаем к сотрудничеству дилеров</p>
-            <p class="location__address">
-              <span>ул. Большая Конюшенная, д. 19/8</span>
-              <span>Санкт-Петербург</span>
-            </p>
-          </div>
+          <div class="container">
+            <div class="location__wrap">
+              <p class="location__text">Приглашаем к сотрудничеству дилеров</p>
+              <p class="location__address">
+                <span>ул. Большая Конюшенная, д. 19/8</span>
+                <span>Санкт-Петербург</span>
+              </p>
+            </div>
+          </div> <!-- /container -->
 
           <!-- Карта -->
           <div class="location__map">
             <img class="location__map-image" src="img/map-location-mobile.webp" alt="карта с местоположением" width="320" height="362">
-            <img class="location__map-pin" src="img/logo/map-pin-logo.webp" alt="пин нан карте" width="57" height="53">
+            <img class="location__map-pin" src="img/logo/map-pin-logo.webp" alt="пин на карте" width="57" height="53">
           </div>
         </section>
     </main>
 
     <!-- Подвал сайта  -->
     <footer class="footer__container footer">
-      <div class="container">
-        <h2 class="visually-hidden">Наши контакты</h2>
+      <h2 class="visually-hidden">Наши контакты</h2>
 
+      <div class="container">
         <!-- Текстовый логотип -->
         <a class="footer__logo-link logo-link" href="#">
-          <span class="visually-hidden">Логотип сайта</span>
+
           <img class="footer__logo-text logo-text" src="img/logo/text-logo.svg" width="128" height="24" alt="логотип сайта текстовый">
         </a>
 
@@ -207,7 +217,7 @@
 
         <!-- Логотип HTML-академии -->
         <a class="footer__site-link" href="https://htmlacademy.ru/" target="_blank">
-          <span class="visually-hidden">Ссылка на сайт HTML-академии</span>
+          <span class="">HTML Academy</span>
           <img src="img/logo/logo-html-academy.svg" alt="логотип HTML-академии" width="27" height="34">
         </a>
       </div> <!-- /container -->

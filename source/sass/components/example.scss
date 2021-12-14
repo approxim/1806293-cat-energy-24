@@ -1,0 +1,53 @@
+.example {
+  background-color: #f2f2f2;
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+
+.example__title {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  margin: 0 0 40px;
+}
+
+.example__text {
+  font-family: $font-secondary;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-special-dark-grey;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.example__profit {
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+
+
+  dt {
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  dd {
+    margin: 0;
+    font-family: $font-secondary;
+    font-size: 12px;
+    line-height: 100%;
+    color: $color-special-dark-grey;
+    width: 80px;
+  }
+}
+
+.example__expenses {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 20px;
+}

@@ -1,0 +1,34 @@
+.footer {
+  background-color: $color-basic-grey;
+}
+
+.footer .container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.footer__logo-text {
+  padding: 39px 0 32px;
+}
+
+.footer__social {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+
+  a:not(:last-child) {
+    margin-right: 35px;
+  }
+}
+
+.footer-social__icon {
+  display: block;
+}
+
+.footer__site-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+}
