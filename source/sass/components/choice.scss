@@ -28,7 +28,7 @@
   position: relative;
   margin: 19px 0 0;
 
-  &:after {
+  &::after {
     content: "";
     display: block;
     position: absolute;
@@ -50,7 +50,7 @@
   color: $color-black;
   position: relative;
 
-  &:after {
+  &::after {
     content: url("../../img/icons/arrow.svg");
     display: block;
     position: absolute;

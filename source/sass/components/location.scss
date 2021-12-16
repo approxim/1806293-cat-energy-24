@@ -1,17 +1,15 @@
 .location__wrap {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 26px 0;
-
-  p {
-    margin: 0;
-  }
 }
 
 .location__text {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  margin: 0 15px 0 0;
 }
 
 .location__address {
@@ -22,7 +20,7 @@
   font-size: 14px;
   line-height: 20px;
   color: $color-special-dark-grey;
-  margin-left: 10px;
+  margin: 0;
 }
 
 .location__map {

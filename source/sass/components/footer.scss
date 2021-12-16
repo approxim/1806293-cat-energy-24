@@ -26,9 +26,20 @@
   display: block;
 }
 
-.footer__site-link {
+.htmlacademy-link {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 22px 0;
+  text-decoration: none;
 }
+
+.htmlacademy-link__text {
+  font-family: $font-secondary;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-special-dark-grey;
+
+}
+

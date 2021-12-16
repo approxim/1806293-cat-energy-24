@@ -1,0 +1,46 @@
+.more-product__title {
+  font-size: 24px;
+  line-height: 24px;
+  color: $color-black;
+  font-weight: 400;
+  position: relative;
+  margin: 25px 0 36px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    right: -105px;
+    width: 50%;
+    height: 2px;
+    background-color: $color-basic-green;
+  }
+}
+
+.more-products__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.more-products__item {
+
+}
+
+.more-products__text-title {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $color-black;
+  margin: 0;
+}
+
+.more-products__desc {
+  display: flex;
+  justify-content: space-between;
+  font-family: $font-secondary;
+  color: $color-special-dark-grey;
+  font-size: 14px;
+  line-height: 14px;
+}
