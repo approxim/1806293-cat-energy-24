@@ -37,9 +37,26 @@ body {
 .green-button {
   background-color: $color-basic-green;
   text-transform: uppercase;
+  color: $color-white;
+  font-family: $font-primary;
+  text-decoration: none;
+  margin: 20px auto 0;
+  text-align: center;
+  display: block;
+  padding: 10px 0;
+  border: none;
+  cursor: pointer;
 }
 
 .grey-button {
   background-color: $color-basic-grey;
   text-transform: uppercase;
+  font-family: $font-primary;
+  color: $color-special-dark-grey;
+  border: none;
+  cursor: pointer;
+  padding: 10px 0;
+  text-decoration: none;
+  margin: 20px auto 0;
+  text-align: center;
 }
