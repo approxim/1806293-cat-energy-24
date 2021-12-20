@@ -59,6 +59,7 @@
           <!-- <div class="promo__wrapper">
             <img class="promo__image" src="img/index-background-mobile.webp" alt="сытый довольный кот" width="100%" height="auto">
           </div> -->
+          <div class="promo__img"></div>
 
           <div class="container">
             <div class="promo__info">
@@ -185,43 +186,43 @@
     </main>
 
     <!-- Подвал сайта  -->
-    <footer class="footer__container footer">
+  <footer class="footer__container footer">
+    <div class="container">
       <h2 class="visually-hidden">Наши контакты</h2>
 
-      <div class="container">
-        <!-- Текстовый логотип -->
-        <a class="footer__logo-link logo-link" href="#">
+      <!-- Текстовый логотип -->
+      <a class="footer__logo-link logo-link footer__item" href="#">
+        <span class="visually-hidden">Логотип сайта</span>
+        <img class="footer__logo-text logo-text" src="img/logo/text-logo.svg" width="128" height="24" alt="логотип сайта текстовый">
+      </a>
 
-          <img class="footer__logo-text logo-text" src="img/logo/text-logo.svg" width="128" height="24" alt="логотип сайта текстовый">
+      <!-- Иконки соцсетей -->
+      <div class="footer__social footer__item">
+        <span class="visually-hidden">Мы в социальных сетях</span>
+
+        <a class="footer-social__icon" href="https://vk.com/htmlacademy" target="_blank" title="vkontakte">
+          <img src="img/icons/social-vk-icon.svg" alt="иконка vkontakte" width="29" height="17">
+          <span class="visually-hidden">Мы вконтакте</span>
         </a>
 
-        <!-- Иконки соцсетей -->
-        <div class="footer__social">
-          <span class="visually-hidden">Мы в социальных сетях</span>
-
-          <a class="footer-social__icon" href="https://vk.com/htmlacademy" target="_blank" title="vkontakte">
-            <img src="img/icons/social-vk-icon.svg" alt="иконка vkontakte" width="29" height="17">
-            <span class="visually-hidden">Мы вконтакте</span>
-          </a>
-
-          <a class="footer-social__icon" href="https://www.instagram.com/htmlacademy/?hl=ru" target="_blank" title="instagram">
-            <img src="img/icons/social-insta-icon.svg" alt="иконка instagram" width="23" height="23">
-            <span class="visually-hidden">Мы в Инстаграм</span>
-          </a>
-
-          <a class="footer-social__icon" href="https://www.facebook.com/htmlacademy" target="_blank" title="facebook">
-            <img src="img/icons/social-facebook-icon.svg" alt="иконка facebook" width="13" height="23">
-            <span class="visually-hidden">Мы в Фейсбук</span>
-          </a>
-        </div>
-
-        <!-- Логотип HTML-академии -->
-        <a class="htmlacademy-link" href="https://htmlacademy.ru/" target="_blank">
-          <span class="htmlacademy-link__text">HTML Academy</span>
-          <img class="htmlacademy-link__logo" src="img/logo/logo-html-academy.svg" alt="логотип HTML-академии" width="27" height="34">
+        <a class="footer-social__icon" href="https://www.instagram.com/htmlacademy/?hl=ru" target="_blank" title="instagram">
+          <img src="img/icons/social-insta-icon.svg" alt="иконка instagram" width="23" height="23">
+          <span class="visually-hidden">Мы в Инстаграм</span>
         </a>
-      </div> <!-- /container -->
-    </footer>
+
+        <a class="footer-social__icon" href="https://www.facebook.com/htmlacademy" target="_blank" title="facebook">
+          <img src="img/icons/social-facebook-icon.svg" alt="иконка facebook" width="13" height="23">
+          <span class="visually-hidden">Мы в Фейсбук</span>
+        </a>
+      </div>
+
+      <!-- Логотип HTML-академии -->
+      <a class="htmlacademy-link " href="https://htmlacademy.ru/" target="_blank">
+        <span class="htmlacademy-link__text">HTML Academy</span>
+        <img class="htmlacademy-link__logo" src="img/logo/logo-html-academy.svg" alt="логотип HTML-академии" width="27" height="34">
+      </a>
+    </div> <!-- /container -->
+  </footer>
 
   </body>
 </html>

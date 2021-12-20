@@ -160,9 +160,9 @@
 
     <!-- Местоположение -->
     <section class="location--catalog location">
-      <div class="container">
-        <h2 class="visially-hidden">Наше местоположение</h2>
+      <h2 class="visually-hidden">Наше местоположение</h2>
 
+      <div class="container">
         <!-- Адрес -->
         <div class="location__wrap">
           <p class="location__text">Приглашаем к сотрудничеству дилеров</p>
@@ -171,28 +171,29 @@
             <span>Санкт-Петербург</span>
           </p>
         </div>
-
-        <!-- Карта -->
-        <div class="location__map">
-          <img class="location__map-image" src="img/map-location.webp" alt="карта с местоположением" width="320" height="362">
-          <img class="location__map-pin" src="img/logo/map-pin-logo.webp" alt="пин нан карте" width="57" height="53">
-        </div>
       </div> <!-- /container -->
+
+      <!-- Карта -->
+      <div class="location__map">
+        <img class="location__map-image" src="img/map-location-mobile.webp" alt="карта с местоположением" width="320" height="362">
+        <img class="location__map-pin" src="img/logo/map-pin-logo.webp" alt="пин нан карте" width="57" height="53">
+      </div>
     </section> <!-- /location -->
   </main>
 
+  <!-- Подвал сайта  -->
   <footer class="footer__container footer">
     <div class="container">
       <h2 class="visually-hidden">Наши контакты</h2>
 
       <!-- Текстовый логотип -->
-      <a class="footer__logo-link logo-link" href="#">
+      <a class="footer__logo-link logo-link footer__item" href="#">
         <span class="visually-hidden">Логотип сайта</span>
         <img class="footer__logo-text logo-text" src="img/logo/text-logo.svg" width="128" height="24" alt="логотип сайта текстовый">
       </a>
 
       <!-- Иконки соцсетей -->
-      <div class="footer__social">
+      <div class="footer__social footer__item">
         <span class="visually-hidden">Мы в социальных сетях</span>
 
         <a class="footer-social__icon" href="https://vk.com/htmlacademy" target="_blank" title="vkontakte">
@@ -212,9 +213,9 @@
       </div>
 
       <!-- Логотип HTML-академии -->
-      <a class="footer__site-link" href="https://htmlacademy.ru/" target="_blank">
-        <span class="visually-hidden">Ссылка на сайт HTML-академии</span>
-        <img src="img/logo/logo-html-academy.svg" alt="логотип HTML-академии" width="27" height="34">
+      <a class="htmlacademy-link " href="https://htmlacademy.ru/" target="_blank">
+        <span class="htmlacademy-link__text">HTML Academy</span>
+        <img class="htmlacademy-link__logo" src="img/logo/logo-html-academy.svg" alt="логотип HTML-академии" width="27" height="34">
       </a>
     </div> <!-- /container -->
   </footer>

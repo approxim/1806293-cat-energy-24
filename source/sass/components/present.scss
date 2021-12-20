@@ -1,0 +1,23 @@
+.present {
+  background: url("../../img/spacecat.webp") no-repeat;
+  background-position: left top;
+  background-size: cover;
+  padding: 0 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.present__icon {
+  display: block;
+  margin: 0 auto;
+}
+
+.present__text {
+  font-family: $font-secondary;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-white;
+  margin: 0;
+}
