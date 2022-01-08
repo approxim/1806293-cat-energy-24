@@ -17,30 +17,30 @@
     top: 0;
     left: 0;
   }
-}
 
-.present__info {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: space-evenly;
-  position: relative;
-  height: 100%;
-  z-index: 20;
-  margin: 0 auto;
-}
+  &__info {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    height: 100%;
+    z-index: 20;
+    margin: 0 auto;
+  }
 
-.present__icon {
-  display: block;
-  margin: 0 auto;
-}
+  &_icon {
+    display: block;
+    margin: 0 auto;
+  }
 
-.present__text {
-  font-family: $font-secondary;
-  font-size: 16px;
-  line-height: 20px;
-  color: $color-white;
-  margin: 0;
-  text-align: center;
-  width: 182px;
+  &__text {
+    font-family: $font-secondary;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-white;
+    margin: 0;
+    text-align: center;
+    width: 182px;
+  }
 }

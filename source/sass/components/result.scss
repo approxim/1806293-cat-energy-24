@@ -1,17 +1,17 @@
 .result {
   margin-top: 40px;
-}
 
-.result__image {
-  display: block;
-  margin: 0 auto;
+  &__image {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .slim-cat {
   display: none;
-}
-
-.result__buttons {
-  display: flex;
-  justify-content: center;
 }
