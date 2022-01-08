@@ -1,0 +1,197 @@
+@mixin form_text {
+  font-family: $font-primary;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $color-special-dark-grey;
+}
+
+@mixin form_input {
+  width: 100%;
+  height: 45px;
+  padding: 0 15px;
+  border: 1px solid $color-special-grey;
+  box-sizing: border-box;
+}
+
+/* Секция Программы */
+.program {
+  h1 {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+// Форма
+.program-form {
+  display: grid;
+  grid-template-columns: minmax(200px, auto);
+
+  fieldset {
+    border: none;
+    display: flex;
+    flex-flow: column;
+    padding: 0;
+    width: 100%;
+  }
+
+  fieldset:nth-of-type(1),
+  fieldset:nth-of-type(2) {
+    @include gray-line;
+
+    &::after {
+      bottom: -23px;
+    }
+  }
+}
+
+.program .subtitle {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  padding-right: 40px;
+  margin-bottom: 17px;
+}
+
+.initial-values {
+  margin-top: 23px;
+  margin-bottom: 23px;
+
+  &__item {
+    @include form_text;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:not(:last-of-type) {
+      margin-bottom: 13px;
+    }
+
+    span {
+      white-space: nowrap;
+      margin-right: 13px;
+    }
+
+    input {
+      @include form_text;
+      @include form_input;
+    }
+  }
+}
+
+.needed-values {
+  margin-top: 23px;
+  margin-bottom: 23px;
+
+  &__item:not(:last-of-type) {
+    margin-bottom: 25px;
+  }
+
+  &__label {
+    @include form_text;
+  }
+}
+
+.contact-details {
+  margin-top: 23px;
+  margin-bottom: 23px;
+
+  legend {
+    font-size: 24px;
+    line-height: 24px;
+    color: $color-black;
+    font-weight: 400;
+    margin-bottom: 35px;
+
+    @include green-line;
+  }
+
+  input {
+    @include form_input;
+    @include form_text;
+  }
+
+  &__item {
+    color: $color-special-dark-grey;
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+
+    @include form_text;
+
+    span {
+      margin-right: 13px;
+      white-space: nowrap;
+    }
+  }
+}
+
+.comment {
+  margin-top: 0;
+  margin-bottom: 23px;
+
+  legend {
+    font-size: 24px;
+    line-height: 24px;
+    color: $color-black;
+    font-weight: 400;
+    margin-bottom: 35px;
+
+    @include green-line;
+  }
+
+  .comment__field {
+    min-width: 200px;
+    width: 100%;
+    padding: 10px 15px;
+    box-sizing: border-box;
+
+    @include form_text;
+
+    &::placeholder {
+      color: $color-special-dark-grey;
+    }
+  }
+}
+
+.additional {
+  legend {
+    font-size: 24px;
+    line-height: 24px;
+    color: $color-black;
+    font-weight: 400;
+    margin-bottom: 39px;
+
+    @include green-line;
+  }
+
+  &__item:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+
+  &__product {
+    @include form_text;
+    color: $color-black;
+  }
+}
+
+.program__submit {
+  width: 100%;
+  margin-top: 34px;
+  margin-bottom: 20px;
+}
+
+.required-field {
+  font-family: $font-secondary;
+  margin: 0 auto 32px;
+}
+
+.location--form {
+  .container {
+    background-color: $color-basic-grey;
+  }
+}
+.location__wrap--form {
+
+}

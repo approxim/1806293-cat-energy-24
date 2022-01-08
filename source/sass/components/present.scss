@@ -1,12 +1,33 @@
 .present {
   background: url("../../img/spacecat.webp") no-repeat;
-  background-position: left top;
-  background-size: cover;
-  padding: 0 20px;
+  background-position: center;
+  background-size: 105% auto;
+  width: 100%;
+  height: 290px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: transparentize($color-basic-green, .2);
+    z-index: 0;
+    top: 0;
+    left: 0;
+  }
+}
+
+.present__info {
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  position: relative;
+  height: 100%;
+  z-index: 20;
+  margin: 0 auto;
 }
 
 .present__icon {
@@ -20,4 +41,6 @@
   line-height: 20px;
   color: $color-white;
   margin: 0;
+  text-align: center;
+  width: 182px;
 }

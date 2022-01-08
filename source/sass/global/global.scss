@@ -21,6 +21,7 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .visually-hidden {
@@ -59,4 +60,47 @@ body {
   text-decoration: none;
   margin: 20px auto 0;
   text-align: center;
+}
+
+@mixin green-line {
+  position: relative;
+  // overflow: hidden;
+
+  &::after,
+  &::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 50vw;
+    height: 2px;
+    vertical-align: middle;
+    background: $color-basic-green;
+  }
+
+  &::after {
+    left: 20px;
+    margin-right: -50%;
+  }
+
+  &::before {
+    display: none;
+    left: -20px;
+    margin-left: -50%;
+  }
+}
+
+@mixin gray-line {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -37px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1px;
+    background-color: $color-special-grey;
+  }
 }
