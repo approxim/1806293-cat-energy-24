@@ -1,14 +1,59 @@
 .choice {
-  &__wrapper {
+
+  @media (min-width: $desctop-width) {
+    display: flex;
+    column-gap: 80px;
+  }
+
+  &__item {
     background-color: $color-basic-grey;
     margin-top: 20px;
     padding: 20px;
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-areas:
+    "choice__img choice__title"
+    "choice__description choice__description"
+    "choice__link choice__link";
+    grid-template-columns: 50px auto;
+    column-gap: 20px;
     align-items: center;
 
-    img {
-      margin-right: 19px;
+    @media (min-width: $tablet-width) {
+      padding: 77px 50px 57px;
+      grid-template-columns: auto 200px;
+      grid-template-areas:
+      "choice__title choice__img"
+      "choice__description choice__img"
+      "choice__link choice__img";
+      column-gap: 40px;
+    }
+
+    @media (min-width: $desctop-width) {
+      padding: 40px 50px 60px;
+      grid-template-columns: 100px auto;
+      grid-template-areas:
+      "choice__img choice__title"
+      "choice__description choice__description"
+      "choice__link choice__link";
+    }
+  }
+
+  &__img {
+    grid-area: choice__img;
+    justify-self: center;
+
+    @media (min-width: $tablet-width) {
+      width: auto;
+      height: auto;
+      max-height: 211px;
+      max-width: 268px;
+    }
+
+    @media (min-width: $desctop-width) {
+      width: auto;
+      height: auto;
+      max-height: 106px;
+      max-width: 134px;
     }
   }
 
@@ -19,6 +64,12 @@
     text-transform: uppercase;
     color: $color-black;
     margin: 0;
+    grid-area: choice__title;
+
+    @media (min-width: $tablet-width) {
+      font-size: 36px;
+      line-height: 36px;
+    }
   }
 
   &__description {
@@ -28,6 +79,12 @@
     color: $color-special-dark-grey;
     position: relative;
     margin: 19px 0 0;
+    grid-area: choice__description;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+      line-height: 24px;
+    }
 
     &::after {
       content: "";
@@ -37,6 +94,10 @@
       background-color: #d9d9d9;
       width: 100%;
       height: 1px;
+
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
     }
   }
 
@@ -50,12 +111,22 @@
     text-transform: uppercase;
     color: $color-black;
     position: relative;
+    white-space: nowrap;
+    grid-area: choice__link;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: 50px;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-top: 27px;
+    }
 
     &::after {
       content: url("../../img/icons/arrow.svg");
-      display: block;
-      position: absolute;
-      right: -40px;
+      padding-left: 15px;
       top: 50%;
       transform: translateY(-50%);
       width: 24px;

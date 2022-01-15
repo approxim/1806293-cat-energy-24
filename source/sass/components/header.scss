@@ -2,16 +2,81 @@
   width: 100%;
   padding: 10px 0;
   border-bottom: 1px solid $color-special-grey;
+  box-sizing: border-box;
 
-  & .container {
+  @media (min-width: $desctop-width) {
+    border: none;
+    margin-top: 60px;
+    background-color: transparent;
+    position: absolute;
+    z-index: 100;
+  }
+
+  &__container {
     display: flex;
-    flex-flow: row;
-    justify-content: space-between;
     align-items: center;
   }
 }
 
-// Список меню
-.nav__list {
-  display: none;
+.logo-link {
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 12px;
+  }
 }
+
+.logo-text {
+  margin-right: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+
+  &__toggle {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  // Список меню
+  &__list {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      list-style-type: none;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-end;
+    }
+
+    @media (min-width: $desctop-width) {
+      width: 45vw;
+    }
+  }
+
+  &__item {
+    margin-left: 36px;
+  }
+
+  &__link {
+    @media (min-width: $tablet-width) {
+      text-decoration: none;
+      color: $color-black;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    @media (min-width: $desctop-width) {
+      color: $color-black;
+    }
+
+    &--index {
+      @media (min-width: $desctop-width) {
+        color: $color-white;
+      }
+    }
+  }
+}
+
