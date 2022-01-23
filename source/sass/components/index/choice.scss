@@ -1,5 +1,4 @@
 .choice {
-
   @media (min-width: $desctop-width) {
     display: flex;
     column-gap: 80px;
@@ -7,7 +6,7 @@
 
   &__item {
     background-color: $color-basic-grey;
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 20px;
     display: grid;
     grid-template-areas:
@@ -35,6 +34,8 @@
       "choice__img choice__title"
       "choice__description choice__description"
       "choice__link choice__link";
+      width: 50%;
+      column-gap: 65px;
     }
   }
 
@@ -84,6 +85,11 @@
     @media (min-width: $tablet-width) {
       font-size: 16px;
       line-height: 24px;
+      padding-right: 45px;
+    }
+
+    @media (min-width: $desctop-width) {
+      margin-top: 34px;
     }
 
     &::after {
@@ -120,8 +126,8 @@
       margin-top: 50px;
     }
 
-    @media (min-width: $tablet-width) {
-      margin-top: 27px;
+    @media (min-width: $desctop-width) {
+      margin-top: 10px;
     }
 
     &::after {

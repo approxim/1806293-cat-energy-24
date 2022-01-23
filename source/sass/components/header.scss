@@ -4,8 +4,11 @@
   border-bottom: 1px solid $color-special-grey;
   box-sizing: border-box;
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $tablet-width) {
     border: none;
+  }
+
+  @media (min-width: $desctop-width) {
     margin-top: 60px;
     background-color: transparent;
     position: absolute;
@@ -62,6 +65,8 @@
 
   &__link {
     @media (min-width: $tablet-width) {
+      font-size: 18px;
+      line-height: 24px;
       text-decoration: none;
       color: $color-black;
       text-transform: uppercase;
@@ -70,6 +75,7 @@
 
     @media (min-width: $desctop-width) {
       color: $color-black;
+      font-size: 20px;
     }
 
     &--index {

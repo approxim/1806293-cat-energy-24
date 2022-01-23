@@ -99,58 +99,67 @@
             <li class="working__item">
               <img src="img/icons/working-icon-1.svg" alt="только полезные вещества" width="60" height="60">
               <p class="working__description">Функциональное питание содержит только полезные питательные вещества.</p>
+              <span class="working__digit">1</span>
             </li>
 
             <li class="working__item">
               <img src="img/icons/working-icon-2.svg" alt="залей кипятком и готово" width="60" height="60">
               <p class="working__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+              <span class="working__digit">2</span>
             </li>
 
             <li class="working__item">
               <img src="img/icons/working-icon-3.svg" alt="замена на наше питание" width="60" height="60">
               <p class="working__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
+              <span class="working__digit">3</span>
             </li>
 
             <li class="working__item">
               <img src="img/icons/working-icon-4.svg" alt="изменения уже через месяц" width="60" height="60">
               <p class="working__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+              <span class="working__digit">4</span>
             </li>
           </ul>
         </section> <!-- /Секция Как это работает -->
 
         <!-- Секция Живой пример -->
         <section class="example container">
-          <h2 class="example__title">Живой пример</h2>
-          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <div class="example__profit">
-            <dl>
-              <dt>5кг</dt>
-              <dd>снижение веса</dd>
-            </dl>
-            <dl>
-              <dt>60 дней</dt>
-              <dd>затрачено времени</dd>
-            </dl>
-          </div>
-          <p class="example__expenses">
-            <span>Затраты на питание:</span>
-            <span>15 000 РУБ.</span>
-          </p>
-
-
-          <div class="result">
-            <div class="result__wrapper">
-              <img class="result__image fat-cat" src="img/fat-cat-mobile.webp" width="280" height="232" alt="кот до приема правильного корма">
-              <img class="result__image slim-cat" src="img/slim-cat-mobile.webp" width="243" height="232" alt="кот после приема правильного корма">
-            </div>
-            <div class="result__buttons">
-              <button class="result__button-before" type="button">Было</button>
-              <div class="result__range">
-                <button class="result__button-toggle" type="button"></button>
+          <div class="example__info">
+            <h2 class="example__title">Живой пример</h2>
+            <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          </div> <!-- example__info -->
+          <!-- <div class="example__wrap"> -->
+            <div class="example__item">
+              <div class="example__profit">
+                <dl>
+                  <dt>5кг</dt>
+                  <dd>снижение веса</dd>
+                </dl>
+                <dl>
+                  <dt>60 дней</dt>
+                  <dd>затрачено времени</dd>
+                </dl>
               </div>
-              <button class="result__button-after" type="button">Стало</button>
-            </div>
-          </div> <!-- /result -->
+              <p class="example__expenses">
+                <span>Затраты на питание:</span>
+                <span>15 000 РУБ.</span>
+              </p>
+            </div> <!-- /example__wrap -->
+
+            <div class="result">
+              <div class="result__item">
+                <img class="result__image fat-cat" src="img/fat-cat-mobile.webp" width="280" height="232" alt="кот до приема правильного корма">
+                <img class="result__image slim-cat" src="img/slim-cat-mobile.webp" width="243" height="232" alt="кот после приема правильного корма">
+              </div>
+              <div class="result__buttons">
+                <button class="result__button result__button-before" type="button">Было</button>
+                <div class="result__range">
+                  <button class="result__toggle" type="button"></button>
+                </div>
+                <button class="result__button result__button-after" type="button">Стало</button>
+              </div>
+            </div> <!-- /result -->
+          <!-- </div> --> <!-- /example__wrap -->
         </section> <!-- /Секция Живой пример -->
 
         <!-- Местоположение -->
@@ -177,7 +186,7 @@
     </main>
 
     <!-- Подвал сайта  -->
-  <footer class="footer__container footer container">
+  <footer class="footer container">
     <h2 class="visually-hidden">Наши контакты</h2>
 
     <!-- Текстовый логотип -->
@@ -207,11 +216,10 @@
     </div>
 
     <!-- Логотип HTML-академии -->
-    <a class="htmlacademy-link " href="https://htmlacademy.ru/" target="_blank">
+    <a class="htmlacademy-link" href="https://htmlacademy.ru/" target="_blank">
       <span class="htmlacademy-link__text">HTML Academy</span>
       <img class="htmlacademy-link__logo" src="img/logo/logo-html-academy.svg" alt="логотип HTML-академии" width="27" height="34">
     </a>
-
   </footer>
 
   </body>

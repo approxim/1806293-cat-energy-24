@@ -4,15 +4,16 @@
 @import "./global/global.scss";
 
 // components
+  //index
 @import "././components/header.scss";
-@import "././components/promo.scss";
-@import "././components/choice.scss";
-@import "././components/working.scss";
-@import "././components/example.scss";
-@import "././components/result.scss";
+@import "././components/index/promo.scss";
+@import "././components/index/choice.scss";
+@import "././components/index/working.scss";
+@import "././components/index/example.scss";
+@import "././components/index/result.scss";
 @import "././components/location.scss";
 @import "././components/footer.scss";
-@import "././components/basic-products.scss";
-@import "././components/more-products.scss";
-@import "././components/present.scss";
-@import "././components/program.scss";
+@import "././components/catalog/basic-products.scss";
+@import "././components/catalog/more-products.scss";
+@import "././components/catalog/present.scss";
+@import "././components//form/program.scss";

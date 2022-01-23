@@ -1,0 +1,136 @@
+.example {
+  background-color: #f2f2f2;
+  padding-top: 25px;
+  padding-bottom: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(to bottom, $color-white 0%, $color-white 60%, #eaeaea 60%, #eaeaea 100%);
+    padding-top: 45px;
+  }
+
+  @media (min-width: $desctop-width) {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
+
+  }
+
+  &__info {
+    @media (min-width: $desctop-width) {
+
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 400;
+    margin: 0 0 40px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 60px;
+      line-height: 60px;
+      margin-bottom: 65px;
+    }
+  }
+
+  &__text {
+    font-family: $font-secondary;
+    font-size: 14px;
+    line-height: 18px;
+    color: $color-special-dark-grey;
+    margin: 0;
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 65px;
+    }
+  }
+
+  &__item {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    @media (min-width: $desctop-width) {
+
+    }
+  }
+
+  &__profit {
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: $tablet-width) {
+      width: 366px;
+    }
+
+    dl {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    dt {
+      font-size: 24px;
+      line-height: 24px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      white-space: nowrap;
+      padding: 14px 20px 18px;
+      border: 1px solid black;
+      border-radius: 3px;
+
+      @media (min-width: $tablet-width) {
+        font-size: 30px;
+        line-height: 37px;
+        padding: 15px 57px 20px;
+      }
+    }
+
+    dd {
+      margin: 0;
+      font-family: $font-secondary;
+      font-size: 12px;
+      line-height: 12px;
+      color: $color-special-dark-grey;
+      width: 80px;
+
+      @media (min-width: $tablet-width) {
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+  }
+
+  &__expenses {
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      display: flex;
+      flex-flow: column;
+      align-items: flex-end;
+      justify-content: center;
+      margin: 12px 0 0 0;
+    }
+
+    span:first-child {
+      @media (min-width: $tablet-width) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
