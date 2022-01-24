@@ -69,30 +69,34 @@ body {
   text-align: center;
 }
 
+// @mixin green-line {
+//   position: relative;
+
+//   &::after,
+//   &::before {
+//     content: "";
+//     display: inline-block;
+//     position: relative;
+//     width: 50vw;
+//     height: 2px;
+//     vertical-align: middle;
+//     background: $color-basic-green;
+//   }
+
+//   &::after {
+//     left: 20px;
+//     margin-right: -50%;
+//   }
+
+//   &::before {
+//     display: none;
+//     left: -20px;
+//     margin-left: -50%;
+//   }
+// }
+
 @mixin green-line {
-  position: relative;
 
-  &::after,
-  &::before {
-    content: "";
-    display: inline-block;
-    position: relative;
-    width: 50vw;
-    height: 2px;
-    vertical-align: middle;
-    background: $color-basic-green;
-  }
-
-  &::after {
-    left: 20px;
-    margin-right: -50%;
-  }
-
-  &::before {
-    display: none;
-    left: -20px;
-    margin-left: -50%;
-  }
 }
 
 @mixin gray-line {
