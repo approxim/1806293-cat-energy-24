@@ -3,34 +3,69 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 26px 0;
+    padding: 26px 20px;
+    background-color: $color-basic-grey;
+
+    @media (min-width: $tablet-width) {
+      padding: 56px 70px;
+      margin-top: 76px;
+    }
   }
 
   &__text {
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
-    margin: 0 15px 0 0;
+    margin: 0;
+    width: 50%;
+
+    @media (min-width: $tablet-width) {
+      width: 170px;
+      font-size: 20px;
+      line-height: 26px;
+    }
   }
 
   &__address {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+    width: 50%;
     font-family: $font-secondary;
     font-size: 14px;
     line-height: 20px;
     color: $color-special-dark-grey;
     margin: 0;
+
+    @media (min-width: $tablet-width) {
+      width: 170px;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: right;
+    }
+
+    span:first-child {
+      @media (min-width: $tablet-width) {
+        margin-bottom: 22px;
+      }
+    }
   }
 
   &__map {
     position: relative;
+    height: 362px;
+    width: 100%;
+
+    @media (min-width: $tablet-width) {
+      height: 400px;
+    }
 
     &-image {
       display: block;
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
+
     }
 
     &-pin {

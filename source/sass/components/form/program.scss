@@ -4,14 +4,23 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $color-special-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
 }
 
 @mixin form_input {
   width: 100%;
   height: 45px;
   padding: 0 15px;
-  border: 1px solid $color-special-grey;
+  border: 1px solid $color-basic-grey;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    height: 50px;
+    padding: 0 19px;
+  }
 }
 
 /* Секция Программы */
@@ -21,42 +30,73 @@
       display: none;
     }
   }
-}
 
-// Форма
-.program-form {
-  display: grid;
-  grid-template-columns: minmax(200px, auto);
-
-  fieldset {
-    border: none;
+  // Форма
+  &-form {
     display: flex;
-    flex-flow: column;
-    padding: 0;
-    width: 100%;
-  }
+    flex-direction: column;
 
-  fieldset:nth-of-type(1),
-  fieldset:nth-of-type(2) {
-    @include gray-line;
+    fieldset {
+      border: none;
+      display: flex;
+      flex-flow: column nowrap;
+      padding: 0;
+      width: 100%;
+    }
 
-    &::after {
-      bottom: -23px;
+    &__wrap {
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: $desctop-width) {
+        flex-direction: row;
+        gap: 80px;
+      }
+
+      fieldset {
+        @include gray-line;
+
+        @media (min-width: $desctop-width) {
+          width: 50%;
+          margin: 0;
+        }
+
+        &::after {
+          bottom: -23px;
+
+          @media (min-width: $tablet-width) {
+            display: none;
+          }
+        }
+      }
     }
   }
-}
 
-.program .subtitle {
-  text-transform: uppercase;
-  font-size: 14px;
-  line-height: 18px;
-  padding-right: 40px;
-  margin-bottom: 17px;
+  & .subtitle {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 18px;
+    padding-right: 40px;
+    margin-bottom: 17px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+      width: 330px;
+      margin-top: 55px;
+      margin-bottom: 42px;
+    }
+  }
 }
 
 .initial-values {
   margin-top: 23px;
   margin-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+    grid-column: span 2;
+  }
 
   &__item {
     @include form_text;
@@ -64,8 +104,16 @@
     justify-content: space-between;
     align-items: center;
 
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+    }
+
     &:not(:last-of-type) {
       margin-bottom: 13px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 22px;
+      }
     }
 
     span {
@@ -80,9 +128,16 @@
   }
 }
 
-.needed-values {
+.program-form .needed-values {
   margin-top: 23px;
   margin-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 25px 28px;
+    border: 1px solid $color-basic-grey;
+    box-sizing: border-box;
+  }
 
   &__item:not(:last-of-type) {
     margin-bottom: 25px;
@@ -97,12 +152,23 @@
   margin-top: 23px;
   margin-bottom: 23px;
 
+  @media (min-width: $tablet-width) {
+    margin-top: 72px;
+    margin-bottom: 71px;
+  }
+
   legend {
     font-size: 24px;
     line-height: 24px;
     color: $color-black;
     font-weight: 400;
     margin-bottom: 35px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 36px;
+      line-height: 36px;
+      margin-bottom: 77px;
+    }
 
     @include green-line;
   }
@@ -120,6 +186,14 @@
 
     @include form_text;
 
+    @media (min-width: $tablet-width) {
+      margin-bottom: 22px;
+    }
+
+    @media (min-width: $desctop-width) {
+      width: 50%;
+    }
+
     span {
       margin-right: 13px;
       white-space: nowrap;
@@ -127,27 +201,59 @@
   }
 }
 
+.program-form .contact-details {
+  margin-top: 26px;
+  margin-bottom: 13px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 72px;
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $desctop-width) {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+  }
+}
+
 .comment {
   margin-top: 0;
   margin-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
 
   legend {
     font-size: 24px;
     line-height: 24px;
     color: $color-black;
     font-weight: 400;
-    margin-bottom: 35px;
+    margin-bottom: 38px;
 
     @include green-line;
+
+    @media (min-width: $tablet-width) {
+      font-size: 36px;
+      line-height: 36px;
+      margin-bottom: 75px;
+    }
   }
 
-  .comment__field {
+  &__field {
     min-width: 200px;
     width: 100%;
     padding: 10px 15px;
     box-sizing: border-box;
+    border: 1px solid $color-basic-grey;
 
     @include form_text;
+
+    @media (min-width: $tablet-width) {
+      padding: 11px 19px;
+      height: 174px;
+    }
 
     &::placeholder {
       color: $color-special-dark-grey;
@@ -164,10 +270,25 @@
     margin-bottom: 39px;
 
     @include green-line;
+
+    @media (min-width: $tablet-width) {
+      font-size: 36px;
+      line-height: 36px;
+      margin-bottom: 75px;
+      margin-top: 24px;
+    }
   }
 
   &__item:not(:last-of-type) {
     margin-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      width: 50%;
+    }
+
+    @media (min-width: $desctop-width) {
+      width: 25%;
+    }
   }
 
   &__product {
@@ -176,15 +297,48 @@
   }
 }
 
-.program__submit {
-  width: 100%;
-  margin-top: 34px;
-  margin-bottom: 20px;
+.program-form .additional {
+  @media (min-width: $tablet-width) {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
 }
 
-.required-field {
-  font-family: $font-secondary;
-  margin: 0 auto 32px;
+.program-submit {
+  display: flex;
+  flex-flow: column nowrap;
+
+  @media (min-width: $tablet-width) {
+    flex-flow: row wrap;
+    align-items: center;
+    margin-top: 58px;
+  }
+
+  &__button {
+    width: 100%;
+    margin-top: 34px;
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      display: inline-block;
+      width: 45%;
+      margin: 0 60px 0 0;
+      font-size: 20px;
+    }
+
+    @media (min-width: $desctop-width) {
+      margin-right: 80px;
+    }
+  }
+
+  &__required-field {
+    font-family: $font-secondary;
+    margin: 0 auto 32px;
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+    }
+  }
 }
 
 .location--form {

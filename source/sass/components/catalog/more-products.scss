@@ -1,10 +1,11 @@
 .more-products {
+  margin-bottom: 35px;
+
   &__wrap {
     @media (min-width: $desctop-width) {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 80px;
-      // align-items: flex-start;
     }
   }
 

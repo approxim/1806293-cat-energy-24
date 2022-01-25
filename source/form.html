@@ -49,54 +49,57 @@
 
   <main class="page-main">
 
-    <section class="program container">
-      <h1 class="main__title">Подбор программы</h1>
+    <section class="program container container-form">
+      <h1 class="main__title main__title--form">Подбор программы</h1>
       <p class="subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
       <form class="program-form" action="https://echo.htmlacademy.ru/" name="program-form" method="post">
 
-        <!-- Характеристики кота -->
-        <fieldset class="initial-values">
-          <legend class="visually-hidden">Характеристики кота</legend>
+        <div class="program-form__wrap">
+          <!-- Характеристики кота -->
+          <fieldset class="initial-values">
+            <legend class="visually-hidden">Характеристики кота</legend>
 
-          <label class="initial-values__item">
-            <span>ИМЯ:*</span>
-            <input type="text" name="cat-name" required>
-          </label>
+            <label class="initial-values__item">
+              <span>ИМЯ:*</span>
+              <input type="text" name="cat-name" required>
+            </label>
 
-          <label class="initial-values__item">
-            <span>Вес (кг):*</span>
-            <input type="text" name="cat-weight" required>
-          </label>
+            <label class="initial-values__item">
+              <span>Вес (кг):*</span>
+              <input type="text" name="cat-weight" required>
+            </label>
 
-          <label class="initial-values__item">
-            <span>Возраст (лет):</span>
-            <input type="text" name="cat-age">
-          </label>
-        </fieldset> <!-- /Характеристики кота -->
+            <label class="initial-values__item">
+              <span>Возраст (лет):</span>
+              <input type="text" name="cat-age">
+            </label>
+          </fieldset> <!-- /Характеристики кота -->
 
-        <!-- Требуемые характеристики -->
-        <fieldset class="needed-values">
-          <legend class="visually-hidden">Требуемые характеристики</legend>
 
-          <label class="needed-values__item">
-            <input type="radio" name="needed" value="slimming" checked>
-            <span class="needed-values__mark"></span></span>
-            <span class="needed-values__label">Похудение</span>
-          </label>
+          <!-- Требуемые характеристики -->
+          <fieldset class="needed-values">
+            <legend class="visually-hidden">Требуемые характеристики</legend>
 
-          <label class="needed-values__item">
-            <input type="radio" name="needed" value="gain">
-            <span class="needed-values__mark"></span>
-            <span class="needed-values__label">Набор массы</span>
-          </label>
+            <label class="needed-values__item">
+              <input type="radio" name="needed" value="slimming" checked>
+              <span class="needed-values__mark"></span>
+              <span class="needed-values__label">Похудение</span>
+            </label>
 
-          <label class="needed-values__item">
-            <input type="radio" name="needed" value="dont-know">
-            <span class="needed-values__mark"></span>
-            <span class="needed-values__label">Не знаю (Нужен ваш совет)</span>
-          </label>
-        </fieldset> <!-- /Требуемые характеристики -->
+            <label class="needed-values__item">
+              <input type="radio" name="needed" value="gain">
+              <span class="needed-values__mark"></span>
+              <span class="needed-values__label">Набор массы</span>
+            </label>
+
+            <label class="needed-values__item">
+              <input type="radio" name="needed" value="dont-know">
+              <span class="needed-values__mark"></span>
+              <span class="needed-values__label">Не знаю (Нужен ваш совет)</span>
+            </label>
+          </fieldset> <!-- /Требуемые характеристики -->
+        </div>
 
         <!-- Контактные данные владельца кота -->
         <fieldset class="contact-details">
@@ -149,11 +152,13 @@
           </label>
         </fieldset> <!-- /Дополнительно -->
 
-        <button class="program__submit green-button" type="submit">
-          <span>Отправить заявку</span>
-        </button>
+        <div class="program-submit">
+          <button class="program-submit__button green-button" type="submit">
+            <span>Отправить заявку</span>
+          </button>
 
-        <span class="required-field">* — Обязательные поля</span>
+          <span class="program-submit__required-field">* — Обязательные поля</span>
+        </div>
       </form>
     </section>
 
@@ -161,9 +166,9 @@
     <section class="location--form location">
       <h2 class="visually-hidden">Наше местоположение</h2>
 
-        <!-- Адрес -->
+      <!-- Адрес -->
       <div class="location__wrap container">
-        <p class="location__text">Приглашаем к сотрудничеству дилеров</p>
+        <p class="location__text">Приглашаем <br> к сотрудничеству дилеров!</p>
         <p class="location__address">
           <span>ул. Большая Конюшенная, д. 19/8</span>
           <span>Санкт-Петербург</span>
