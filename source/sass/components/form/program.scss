@@ -25,6 +25,14 @@
 
 /* Секция Программы */
 .program {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $desctop-width) {
+    margin-bottom: 82px;
+  }
+
   h1 {
     &::after {
       display: none;
@@ -338,11 +346,5 @@
     @media (min-width: $tablet-width) {
       margin: 0;
     }
-  }
-}
-
-.location--form {
-  .container {
-    background-color: $color-basic-grey;
   }
 }

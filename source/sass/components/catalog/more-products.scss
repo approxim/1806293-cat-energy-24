@@ -1,6 +1,14 @@
 .more-products {
   margin-bottom: 35px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: $desctop-width) {
+    margin-bottom: 86px;
+  }
+
   &__wrap {
     @media (min-width: $desctop-width) {
       display: grid;
