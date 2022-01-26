@@ -14,7 +14,7 @@
   width: 100%;
   height: 45px;
   padding: 0 15px;
-  border: 1px solid $color-basic-grey;
+  border: 1px solid $color-special-grey-3;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
@@ -135,7 +135,7 @@
   @media (min-width: $tablet-width) {
     margin: 0;
     padding: 25px 28px;
-    border: 1px solid $color-basic-grey;
+    border: 1px solid $color-special-grey-3;
     box-sizing: border-box;
   }
 
@@ -246,7 +246,7 @@
     width: 100%;
     padding: 10px 15px;
     box-sizing: border-box;
-    border: 1px solid $color-basic-grey;
+    border: 1px solid $color-special-grey-3;
 
     @include form_text;
 

@@ -1,7 +1,16 @@
 .promo {
+  height: 480px;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    height: 850px;
+  }
+
   @media (min-width: $desctop-width) {
-    display: flex;
-    position: relative;
+    height: 694px;
   }
 
   &__img {
@@ -15,29 +24,39 @@
     }
 
     @media (min-width: $desctop-width) {
-      position: static;
-      order: 2;
       display: block;
-      height: 694px;
+      height: 100%;
+      right: 0;
+      width: 50%;
+      z-index: -1;
     }
 
+    // Зеленая плашка на фотке
     &::after {
       content: "";
       display: block;
       width: 100%;
       height: 100%;
       background-color: transparentize($color-basic-green, .2);
-
-      @media (min-width: $desctop-width) {
-
-      }
     }
   }
 
   &__wrapper {
-    order: 1;
     display: flex;
-    flex-flow: column-reverse;
+    flex-flow: column;
+    justify-content: space-between;
+    height: 100%;
+
+    @media (min-width: $tablet-width) {
+      justify-content: flex-end;
+      flex-flow: column-reverse;
+      margin-top: 42px;
+    }
+
+    @media (min-width: $desctop-width) {
+      justify-content: center;
+      flex-flow: column;
+    }
   }
 
   &__info {
@@ -45,14 +64,14 @@
     z-index: 10;
     padding-top: 27px;
 
-
     @media (min-width: $tablet-width) {
+      padding-top: 5px;
       text-align: left;
       order: 4;
     }
 
     @media (min-width: $desctop-width) {
-      top: 220px;
+      order: 0;
     }
   }
 
@@ -66,8 +85,14 @@
 
     @media (min-width: $tablet-width) {
       font-size: 60px;
+      line-height: 60px;
       color: $color-black;
       text-align: left;
+      width: 450px;
+    }
+
+    @media (min-width: $desctop-width) {
+      
     }
   }
 
@@ -82,38 +107,68 @@
 
     @media (min-width: $tablet-width) {
       font-size: 20px;
-
+      text-align: left;
       color: $color-black;
+      margin-top: 44px;
     }
   }
 
   &__button {
     text-decoration: none;
     margin: 0 auto;
-    text-align: center;
     display: block;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 18px;
+    box-sizing: border-box;
 
     @media (min-width: $tablet-width) {
-      display: inline-block;
-      text-align: left;
-      margin: 0;
+      width: 244px;
+      font-size: 20px;
+      line-height: 20px;
+      padding: 14px 26px;
+      margin: 50px 0 0 0;
+    }
+
+    @media (min-width: $desctop-width) {
+      order: 4;
     }
   }
 
   &__pack {
     display: block;
     margin: 30px auto 0;
-    position: relative;
+    position: absolute;
+    bottom: 9%;
     z-index: 20;
+    right: 50%;
+    transform: translateX(50%);
+
+    @media (min-width: $tablet-width) {
+      height: 609px;
+      width: auto;
+      bottom: 0;
+      z-index: -1;
+    }
 
     @media (min-width: $desctop-width) {
       position: absolute;
-      width: 520px;
+      width: auto;
       height: 499px;
-      top: 140px;
-      right: 20%;
+      top: 111px;
+      right: 40.9%;
     }
+  }
+}
+
+.container-promo {
+  @media (min-width: $tablet-width) {
+    padding: 0 117px;
+  }
+
+  @media (min-width: $desctop-width) {
+    padding: 0 190px;
   }
 }

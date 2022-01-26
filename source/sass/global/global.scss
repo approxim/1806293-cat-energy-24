@@ -44,6 +44,10 @@ main {
     padding: 0 70px;
   }
 
+  @media (min-width: $desctop-width) {
+    padding: 0 110px;
+  }
+
 }
 
 .visually-hidden {
