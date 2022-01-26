@@ -1,4 +1,10 @@
 .location {
+
+  @media (min-width: $desctop-width) {
+    height: 400px;
+    position: relative;
+  }
+
   &__wrap {
     display: flex;
     align-items: center;
@@ -9,6 +15,16 @@
     @media (min-width: $tablet-width) {
       padding: 56px 70px;
       margin-top: 76px;
+    }
+
+    @media (min-width: $desctop-width) {
+      position: absolute;
+      z-index: 1000;
+      width: 565px;
+      left: 110px;
+      background-color: $color-white;
+      margin-top: 0;
+      
     }
   }
 
@@ -57,7 +73,11 @@
     width: 100%;
 
     @media (min-width: $tablet-width) {
-      height: 400px;
+      height: 396px;
+    }
+
+    @media (min-width: $desctop-width) {
+      height: 100%;
     }
 
     &-image {
