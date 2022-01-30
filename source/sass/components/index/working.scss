@@ -50,6 +50,7 @@
     @media (min-width: $desctop-width) {
       flex-flow: row nowrap;
       justify-content: space-between;
+      margin-bottom: 30px;
     }
   }
 
@@ -70,6 +71,7 @@
     @media (min-width: $desctop-width) {
       width: 25%;
       margin-right: 90px;
+      margin-bottom: 0;
     }
 
     img {

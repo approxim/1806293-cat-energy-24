@@ -1,14 +1,15 @@
 .example {
-  background-color: #f2f2f2;
+  background-color: $color-special-grey-4;
   padding-top: 25px;
   padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
-    background: linear-gradient(to bottom, $color-white 0%, $color-white 60%, #eaeaea 60%, #eaeaea 100%);
+    background: linear-gradient(to bottom, $color-white 0%, $color-white 60%, $color-special-grey-4 60%, $color-special-grey-4 100%);
     padding-top: 45px;
   }
 
   @media (min-width: $desctop-width) {
+    background: linear-gradient(to bottom, $color-white 0%, $color-white 25%, $color-basic-grey 25%, $color-basic-grey 100%);
     display: flex;
     flex-direction: row;
   }
@@ -36,6 +37,10 @@
       line-height: 60px;
       margin-bottom: 65px;
     }
+
+    @media (min-width: $desctop-width) {
+      margin-bottom: 145px;
+    }
   }
 
   &__text {
@@ -50,6 +55,11 @@
       font-size: 16px;
       line-height: 24px;
       margin-bottom: 65px;
+    }
+
+    @media (min-width: $desctop-width) {
+      width: 435px;
+      margin-bottom: 72px;
     }
   }
 
@@ -75,6 +85,11 @@
       width: 366px;
     }
 
+    @media (min-width: $desctop-width) {
+      // margin-bottom: 40px;
+      // width: 350px;
+    }
+
     dl {
       margin: 0;
       display: flex;
@@ -84,6 +99,10 @@
 
     dl:first-child {
       margin-right: 32px;
+
+      @media (min-width: $tablet-width) {
+        margin-right: 42px;
+      }
     }
 
     dt {
@@ -92,28 +111,39 @@
       text-transform: uppercase;
       margin-bottom: 8px;
       white-space: nowrap;
-      padding: 14px 20px 18px;
-      border: 1px solid black;
+      padding: 14px 0 18px;
+      border: 1px solid $color-special-grey;
       border-radius: 3px;
+      box-sizing: border-box;
+      width: 124px;
 
       @media (min-width: $tablet-width) {
         font-size: 30px;
         line-height: 37px;
-        padding: 15px 57px 20px;
+        width: 162px;
       }
     }
 
     dd {
-      margin: 0;
       font-family: $font-secondary;
       font-size: 12px;
       line-height: 12px;
       color: $color-special-dark-grey;
       width: 80px;
+      background-color: $color-special-grey-4;
+      padding: 0 5px;
+      margin: -18px 0 0;
 
       @media (min-width: $tablet-width) {
         font-size: 14px;
         line-height: 14px;
+        background-color: $color-white;
+        width: auto;
+        padding: 0 10px;
+      }
+
+      @media (min-width: $desctop-width) {
+        background-color: $color-basic-grey;
       }
     }
   }
@@ -138,7 +168,8 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      width: 100%;
+      width: 325px;
+      margin-top: 55px;
     }
 
     span:first-child {

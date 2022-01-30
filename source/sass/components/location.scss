@@ -1,5 +1,4 @@
 .location {
-
   @media (min-width: $desctop-width) {
     height: 400px;
     position: relative;
@@ -14,7 +13,6 @@
 
     @media (min-width: $tablet-width) {
       padding: 56px 70px;
-      // margin-top: 76px;
     }
 
     @media (min-width: $desctop-width) {
@@ -96,6 +94,7 @@
       transform: translate3d(-50%, -50%, 0);
     }
   }
+
   &--index .container {
     background-color: $color-white;
   }

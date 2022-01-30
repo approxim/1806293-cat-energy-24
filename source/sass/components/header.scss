@@ -1,7 +1,6 @@
 .header {
   width: 100%;
-  padding: 10px 0;
-  border-bottom: 1px solid $color-special-grey;
+  padding: 11px 0;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
@@ -19,6 +18,11 @@
     display: flex;
     align-items: center;
   }
+
+  &--catalog,
+  &--form {
+    border-bottom: 1px solid $color-special-grey;
+  }
 }
 
 .logo-link {
@@ -31,15 +35,77 @@
 
 .logo-text {
   margin-right: auto;
+  padding: 8px 8px 0 0;
 }
 
 .nav {
   display: flex;
   justify-content: flex-end;
 
+  // Кнопка бургер
   &__toggle {
+    border: none;
+    padding: 8px 12px;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+
     @media (min-width: $tablet-width) {
       display: none;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      width: 24px;
+      height: 1.5px;
+      background-color: $color-black;
+      transition: transform 0.2s ease;
+    }
+
+    &::before {
+      top: 0;
+      box-shadow: 0 8px 0 0 $color-black;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    &:hover::before {
+      top: 50%;
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &:hover::after {
+      top: 50%;
+      transform: rotate(-45deg);
+    }
+
+    &:active::before {
+      top: 50%;
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &:active::after {
+      top: 50%;
+      transform: rotate(-45deg);
+    }
+
+    &.active::before {
+      top: 50%;
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &.active::after {
+      top: 50%;
+      transform: rotate(-45deg);
     }
   }
 
@@ -86,3 +152,41 @@
   }
 }
 
+.nav.active .nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  right: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: $color-white;
+  z-index: 500;
+}
+
+.nav.active .nav__item {
+  margin: 0;
+  padding: 22.5px 15px;
+  border-top: 1px solid $color-special-grey-5;
+  display: block;
+  width: 100%;
+}
+
+.nav.active .nav__item:last-child {
+  border-bottom: 1px solid $color-special-grey-5;
+}
+
+.nav.active a {
+  display: block;
+  text-decoration: none;
+  color: $color-black;
+  font-weight: bolder;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
