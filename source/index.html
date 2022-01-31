@@ -24,13 +24,13 @@
         </a>
 
         <!-- Навигация по сайту -->
-        <nav class="nav ">
+        <nav class="nav">
+          <!-- nav--no-js nav--closed nav--opened -->
           <!-- Бургер -->
-          <button class="nav__toggle " type="button">
+          <button class="nav__toggle" type="button">
             <span class="visually-hidden">открыть-скрыть меню</span>
           </button>
 
-          <!-- Список меню -->
           <ul class="nav__list">
             <li class="nav__item">
               <a class="nav__link nav__link--index nav__link--active">Главная</a>
@@ -44,7 +44,7 @@
               <a class="nav__link nav__link--index" href="form.html">Подбор программы</a>
             </li>
           </ul>
-        </nav>
+        </nav>        
       </div> <!-- /container -->
     </header>
 
@@ -223,4 +223,22 @@
     </footer>
 
   </body>
+
+  <script>
+    let navMain = document.querySelector(".nav");
+    let navToggle = document.querySelector(".nav__toggle");
+
+    navToggle.addEventListener("click", function() {
+      if (navMain.classList.contains("nav--closed")) {
+        navMain.classList.remove("nav--closed");
+        navMain.classList.add("nav--opened");
+        // navToggle.classList.add("active");
+      } else {
+        navMain.classList.remove("nav--opened");
+        navMain.classList.add("nav--closed");
+        // navToggle.classList.remove("active");
+      }
+    });
+  </script>
+
 </html>
