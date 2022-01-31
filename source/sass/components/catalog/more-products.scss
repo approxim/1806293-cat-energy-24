@@ -27,7 +27,7 @@
     padding-bottom: 36px;
     border-bottom: 1px solid $color-special-grey;
 
-    @include green-line;
+    // @include green-line;
 
     @media (min-width: $tablet-width) {
       font-size: 36px;

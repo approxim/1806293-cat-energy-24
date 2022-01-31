@@ -178,7 +178,7 @@
       margin-bottom: 77px;
     }
 
-    @include green-line;
+    // @include green-line;
   }
 
   input {
@@ -240,7 +240,7 @@
     font-weight: 400;
     margin-bottom: 38px;
 
-    @include green-line;
+    // @include green-line;
 
     @media (min-width: $tablet-width) {
       font-size: 36px;
@@ -277,7 +277,7 @@
     font-weight: 400;
     margin-bottom: 39px;
 
-    @include green-line;
+    // @include green-line;
 
     @media (min-width: $tablet-width) {
       font-size: 36px;
