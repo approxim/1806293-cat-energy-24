@@ -31,11 +31,27 @@
   @media (min-width: $tablet-width) {
     margin-right: 12px;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .logo-text {
   margin-right: auto;
   padding: 8px 8px 0 0;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .nav {
@@ -76,10 +92,6 @@
     }
   }
 
-  // &--no-js {
-
-  // }
-
   // Список меню
   &__list {
     display: none;
@@ -110,6 +122,9 @@
   }
 
   &__link {
+
+    padding: 8px 0;
+
     @media (min-width: $tablet-width) {
       font-size: 18px;
       line-height: 24px;
@@ -127,8 +142,43 @@
     &--index {
       @media (min-width: $desctop-width) {
         color: $color-white;
+
+        &:hover {
+          color: rgba($color-white, .6);
+        }
       }
     }
+
+    &:hover {
+      color: rgba($color-black, .6);
+    }
+
+    &:active {
+      color: rgba($color-black, .3);
+    }
+
+    &--active {
+      border-bottom: 2px solid $color-basic-green;
+    }
+
+    &--index {
+      @media (min-width: $desctop-width) {
+        color: $color-white;
+
+        &:hover {
+          color: rgba($color-white, .6);
+        }
+
+        &:active {
+          color: rgba($color-white, .3);
+        }
+      }
+    }
+
+    &--index.nav__link--active {
+      border-bottom-color: $color-white;
+    }
+
   }
 
   &--closed .nav__list {

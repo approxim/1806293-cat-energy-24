@@ -25,9 +25,9 @@
       <!-- Навигация по сайту -->
       <nav class="nav nav--closed">
         <!-- Бургер -->
-        <button class="nav__toggle" type="button">
+        <a class="nav__toggle" href="nav.html">
           <span class="visually-hidden">открыть-скрыть меню</span>
-        </button>
+        </a>
 
         <!-- Список меню -->
         <ul class="nav__list">
@@ -58,7 +58,7 @@
       <ol class="basic-products__list">
 
         <li class="basic-products__item">
-          <img class="basic-products__image" src="img/priducts/mobile/catalog-product-01.png" alt="Упаковка Cat Energy PRO 500 г" width="68" height="86">
+          <img class="basic-products__image" src="img/products/mobile/catalog-product-01.png" alt="Упаковка Cat Energy PRO 500 г" width="68" height="86">
 
           <div class="basic-products__text-wrap">
             <h3 class="basic-products__text-title">Cat Energy PRO 500 г</h3>
@@ -84,7 +84,7 @@
         </li>
 
         <li class="basic-products__item">
-          <img class="basic-products__image" src="img/priducts/mobile/catalog-product-02.png" alt="Упаковка Cat Energy PRO 1000 г" width="84" height="101">
+          <img class="basic-products__image" src="img/products/mobile/catalog-product-02.png" alt="Упаковка Cat Energy PRO 1000 г" width="84" height="101">
 
           <div class="basic-products__text-wrap">
             <h3 class="basic-products__text-title">Cat Energy PRO 1000 г</h3>
@@ -109,7 +109,7 @@
         </li>
 
         <li class="basic-products__item">
-          <img class="basic-products__image" src="img/priducts/mobile/catalog-product-03.png" alt="Упаковка Cat Energy PRO 500 г" width="68" height="78">
+          <img class="basic-products__image" src="img/products/mobile/catalog-product-03.png" alt="Упаковка Cat Energy PRO 500 г" width="68" height="78">
 
           <div class="basic-products__text-wrap">
             <h3 class="basic-products__text-title">Cat Energy PRO 500 г</h3>
@@ -134,7 +134,7 @@
         </li>
 
         <li class="basic-products__item">
-          <img class="basic-products__image" src="img/priducts/mobile/catalog-product-04.png" alt="Упаковка Cat Energy PRO 1000 г" width="84" height="101">
+          <img class="basic-products__image" src="img/products/mobile/catalog-product-04.png" alt="Упаковка Cat Energy PRO 1000 г" width="84" height="101">
 
           <div class="basic-products__text-wrap">
             <h3 class="basic-products__text-title">Cat Energy PRO 1000 г</h3>
@@ -159,7 +159,7 @@
         </li>
 
         <li class="basic-products__item">
-          <img class="basic-products__image" src="img/priducts/mobile/catalog-product-05.png" alt="Упаковка Cat Energy slim 500г" width="68" height="78">
+          <img class="basic-products__image" src="img/products/mobile/catalog-product-05.png" alt="Упаковка Cat Energy slim 500г" width="68" height="78">
 
           <div class="basic-products__text-wrap">
             <h3 class="basic-products__text-title">Cat Energy slim 500 г</h3>
@@ -184,7 +184,7 @@
         </li>
 
         <li class="basic-products__item">
-          <img class="basic-products__image" src="img/priducts/mobile/catalog-product-06.png" alt="Упаковка Cat Energy slim 1000г" width="84" height="100">
+          <img class="basic-products__image" src="img/products/mobile/catalog-product-06.png" alt="Упаковка Cat Energy slim 1000г" width="84" height="100">
 
           <div class="basic-products__text-wrap">
             <h3 class="basic-products__text-title">Cat Energy slim 1000 г</h3>
@@ -209,7 +209,7 @@
         </li>
 
         <li class="basic-products__item">
-          <img class="basic-products__image" src="img/priducts/mobile/catalog-product-07.png" alt="Упаковка Cat Energy slim 500 г" width="72" height="84">
+          <img class="basic-products__image" src="img/products/mobile/catalog-product-07.png" alt="Упаковка Cat Energy slim 500 г" width="72" height="84">
 
           <div class="basic-products__text-wrap">
             <h3 class="basic-products__text-title">Cat Energy slim 500 г</h3>
@@ -316,8 +316,13 @@
 
       <!-- Карта -->
       <div class="location__map">
-        <img class="location__map-image" src="img/map-location-mobile.webp" alt="карта с местоположением" width="320" height="362">
-        <img class="location__map-pin" src="img/logo/map-pin-logo.webp" alt="пин нан карте" width="57" height="53">
+        <iframe class="location__map--google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8226084133137!2d30.315220215853422!3d59.96826598188698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1643652055060!5m2!1sru!2sru"
+        width="100%"
+        height="362"
+        style="border: 0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
       </div>
     </section> <!-- location -->
   </main>
@@ -364,6 +369,10 @@
 <script>
   let navMain = document.querySelector(".nav");
   let navToggle = document.querySelector(".nav__toggle");
+
+  navToggle.onclick = function (evt) {
+    evt.preventDefault();
+  }
 
   navToggle.addEventListener("click", function() {
     if (navMain.classList.contains("nav--closed")) {

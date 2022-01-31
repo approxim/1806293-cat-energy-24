@@ -72,6 +72,14 @@ main {
   padding: 10px 0;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    background-color: $color-basic-green-dark;
+  }
+
+  &:active {
+    color: rgba($color-white, .3);
+  }
 }
 
 .grey-button {

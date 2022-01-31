@@ -10,9 +10,9 @@
     padding: 20px;
     display: grid;
     grid-template-areas:
-    "choice__img choice__title"
-    "choice__description choice__description"
-    "choice__link choice__link";
+      "choice__img choice__title"
+      "choice__description choice__description"
+      "choice__link choice__link";
     grid-template-columns: 50px auto;
     column-gap: 20px;
     align-items: center;
@@ -21,9 +21,9 @@
       padding: 77px 50px 57px;
       grid-template-columns: auto 200px;
       grid-template-areas:
-      "choice__title choice__img"
-      "choice__description choice__img"
-      "choice__link choice__img";
+        "choice__title choice__img"
+        "choice__description choice__img"
+        "choice__link choice__img";
       column-gap: 40px;
     }
 
@@ -31,9 +31,9 @@
       padding: 40px 50px 60px;
       grid-template-columns: 100px auto;
       grid-template-areas:
-      "choice__img choice__title"
-      "choice__description choice__description"
-      "choice__link choice__link";
+        "choice__img choice__title"
+        "choice__description choice__description"
+        "choice__link choice__link";
       width: 50%;
       column-gap: 65px;
       margin-top: 80px;
@@ -131,12 +131,20 @@
       margin-top: 10px;
     }
 
-    &::after {
-      content: url("../../img/icons/arrow.svg");
-      padding-left: 15px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 24px;
+    // &::after {
+    //   content: url("../../img/icons/arrow.svg");
+    //   padding-left: 15px;
+    //   top: 50%;
+    //   transform: translateY(-50%);
+    //   width: 24px;
+    // }
+
+    &:hover {
+      color: rgba($color-black, .6);
+    }
+
+    &:hover::after {
+      fill:rgba($color-black, .6);
     }
   }
 }
