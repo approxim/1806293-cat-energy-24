@@ -52,8 +52,20 @@
 
     @media (min-width: $tablet-width) {
       font-size: 20px;
-      border-bottom: 1px dotted #b2b2b2;
+      border-bottom: 1px dotted #b8b8b8;
       padding-bottom: 6px;
+    }
+
+    &:hover {
+      @media (min-width: $tablet-width) {
+        border-bottom: 1px solid $color-special-grey-9;
+      }
+    }
+
+    &:active {
+      @media (min-width: $tablet-width) {
+        border-bottom: none;
+      }
     }
   }
 
@@ -94,11 +106,23 @@
       border-radius: 50%;
       border: 13px solid $color-white;
       outline: 1px solid $color-special-grey;
-      box-shadow: 0px 2px 5px 0px $color-special-grey-2;
+      box-shadow: 0 1px 3px $color-special-grey;
       left: 47%;
       box-sizing: border-box;
       font-size: 0;
       padding: 5px;
+    }
+
+    &:hover {
+      @media (min-width: $tablet-width) {
+        box-shadow: 0 2px 4px $color-special-grey;
+      }
+    }
+
+    &:active {
+      @media (min-width: $tablet-width) {
+        outline-color: $color-basic-green;
+      }
     }
   }
 }

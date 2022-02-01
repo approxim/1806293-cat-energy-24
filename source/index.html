@@ -78,7 +78,10 @@
             <img class="choice__img" src="img/icons/cat-slim-icon.svg" width="50" height="53" alt="иконка худого кота">
             <h3 class="choice__title">Похудение</h3>
             <p class="choice__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="choice__link" href="#">Каталог slim</a>
+            <a class="choice__link" href="#">Каталог slim
+              <span>Каталог slim</span>
+              <img src="img/icons/arrow.svg" alt="стрелка" width="32" height="10">
+            </a>
           </div>
 
           <!-- Набор массы -->
@@ -88,7 +91,7 @@
             <p class="choice__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a class="choice__link" href="#">
               <span>Каталог pro</span>
-              <img src="/source/img/icons/arrow.svg" alt="стрелка" width="32" height="10">
+              <img src="img/icons/arrow.svg" alt="стрелка" width="32" height="10">
             </a>
           </div>
         </section> <!-- /Секция Выбор программы -->
@@ -230,25 +233,24 @@
       </a>
     </footer>
 
-  </body>
+    <script>
+      let navMain = document.querySelector(".nav");
+      let navToggle = document.querySelector(".nav__toggle");
 
-  <script>
-    let navMain = document.querySelector(".nav");
-    let navToggle = document.querySelector(".nav__toggle");
-
-    navToggle.onclick = function (evt) {
-      evt.preventDefault();
-    }
-
-    navToggle.addEventListener("click", function() {
-      if (navMain.classList.contains("nav--closed")) {
-        navMain.classList.remove("nav--closed");
-        navMain.classList.add("nav--opened");
-      } else {
-        navMain.classList.remove("nav--opened");
-        navMain.classList.add("nav--closed");
+      navToggle.onclick = function (evt) {
+        evt.preventDefault();
       }
-    });
-  </script>
 
+      navToggle.addEventListener("click", function() {
+        if (navMain.classList.contains("nav--closed")) {
+          navMain.classList.remove("nav--closed");
+          navMain.classList.add("nav--opened");
+        } else {
+          navMain.classList.remove("nav--opened");
+          navMain.classList.add("nav--closed");
+        }
+      });
+    </script>
+
+  </body>
 </html>

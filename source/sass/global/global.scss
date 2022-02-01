@@ -78,7 +78,7 @@ main {
   }
 
   &:active {
-    color: rgba($color-white, .3);
+    color: rgba($color-white, 0.3);
   }
 }
 
@@ -93,11 +93,16 @@ main {
   text-decoration: none;
   margin: 20px auto 0;
   text-align: center;
+
+  &:hover {
+    background-color: $color-special-grey-6;
+  }
+
+  &:active {
+    color: rgba($color-special-dark-grey, 0.3);
+  }
 }
 
-// @mixin green-line {
-
-// }
 
 @mixin gray-line {
   position: relative;

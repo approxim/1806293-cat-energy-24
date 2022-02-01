@@ -62,40 +62,40 @@
 
             <label class="initial-values__item">
               <span>ИМЯ:*</span>
-              <input type="text" name="cat-name" required>
+              <input type="text" name="cat-name" placeholder="барсик" required>
             </label>
 
             <label class="initial-values__item">
               <span>Вес (кг):*</span>
-              <input type="text" name="cat-weight" required>
+              <input type="text" name="cat-weight" placeholder="7" required>
             </label>
 
             <label class="initial-values__item">
               <span>Возраст (лет):</span>
-              <input type="text" name="cat-age">
+              <input type="text" name="cat-age" placeholder="7">
             </label>
           </fieldset> <!-- /Характеристики кота -->
 
 
           <!-- Требуемые характеристики -->
           <fieldset class="needed-values">
-            <legend class="visually-hidden">Требуемые характеристики</legend>
+            <legend class="needed__input visually-hidden">Требуемые характеристики</legend>
 
             <label class="needed-values__item">
-              <input type="radio" name="needed" value="slimming" checked>
-              <span class="needed-values__mark"></span>
+              <input class="needed__input visually-hidden" type="radio" name="needed" value="slimming" checked>
+              <span class="needed-values__mark radio-mark"></span>
               <span class="needed-values__label">Похудение</span>
             </label>
 
             <label class="needed-values__item">
-              <input type="radio" name="needed" value="gain">
-              <span class="needed-values__mark"></span>
+              <input class="needed__input visually-hidden" type="radio" name="needed" value="gain">
+              <span class="needed-values__mark radio-mark"></span>
               <span class="needed-values__label">Набор массы</span>
             </label>
 
             <label class="needed-values__item">
-              <input type="radio" name="needed" value="dont-know">
-              <span class="needed-values__mark"></span>
+              <input class="needed__input visually-hidden" type="radio" name="needed" value="dont-know">
+              <span class="needed-values__mark radio-mark"></span>
               <span class="needed-values__label">Не знаю (Нужен ваш совет)</span>
             </label>
           </fieldset> <!-- /Требуемые характеристики -->
@@ -107,12 +107,12 @@
 
           <label class="contact-details__item">
             <span>E-mail:*</span>
-            <input type="email" name="email" required>
+            <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
           </label>
 
           <label class="contact-details__item">
             <span>Телефон:*</span>
-            <input type="tel" name="telephone" required>
+            <input type="tel" name="telephone" placeholder="8 (960) 900-60-90" required>
           </label>
         </fieldset> <!-- /Контактные данные (владельца кота) -->
 
@@ -128,26 +128,26 @@
           <legend>Дополнительно</legend>
 
           <label class="additional__item">
-            <input type="checkbox" name="additional" value="sweetener" checked>
-            <span class="additional__mark"></span>
+            <input class="additional__input visually-hidden" type="checkbox" name="additional" value="sweetener" checked>
+            <span class="additional__mark check-mark"></span>
             <span class="additional__product">Сахарозаменитель</span>
           </label>
 
           <label class="additional__item">
-            <input type="checkbox" name="additional" value="water">
-            <span class="additional__mark"></span>
+            <input class="additional__input visually-hidden" type="checkbox" name="additional" value="water">
+            <span class="additional__mark check-mark"></span>
             <span class="additional__product">Питьевая вода</span>
           </label>
 
           <label class="additional__item">
-            <input type="checkbox" name="additional" value="milk">
-            <span class="additional__mark"></span>
+            <input class="additional__input visually-hidden" type="checkbox" name="additional" value="milk">
+            <span class="additional__mark check-mark"></span>
             <span class="additional__product">Молоко</span>
           </label>
 
           <label class="additional__item">
-            <input type="checkbox" name="additional" value="vitamins">
-            <span class="additional__mark"></span>
+            <input class="additional__input visually-hidden" type="checkbox" name="additional" value="vitamins">
+            <span class="additional__mark check-mark"></span>
             <span class="additional__product">Витамины</span>
           </label>
         </fieldset> <!-- /Дополнительно -->
@@ -225,23 +225,24 @@
     </a>
   </footer>
 
-</body>
-<script>
-  let navMain = document.querySelector(".nav");
-  let navToggle = document.querySelector(".nav__toggle");
+  <script>
+    let navMain = document.querySelector(".nav");
+    let navToggle = document.querySelector(".nav__toggle");
 
-  navToggle.onclick = function (evt) {
-    evt.preventDefault();
-  }
-
-  navToggle.addEventListener("click", function() {
-    if (navMain.classList.contains("nav--closed")) {
-      navMain.classList.remove("nav--closed");
-      navMain.classList.add("nav--opened");
-    } else {
-      navMain.classList.remove("nav--opened");
-      navMain.classList.add("nav--closed");
+    navToggle.onclick = function (evt) {
+      evt.preventDefault();
     }
-  });
-</script>
+
+    navToggle.addEventListener("click", function() {
+      if (navMain.classList.contains("nav--closed")) {
+        navMain.classList.remove("nav--closed");
+        navMain.classList.add("nav--opened");
+      } else {
+        navMain.classList.remove("nav--opened");
+        navMain.classList.add("nav--closed");
+      }
+    });
+  </script>
+
+</body>
 </html>

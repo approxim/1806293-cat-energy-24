@@ -78,6 +78,26 @@
         }
       }
     }
+
+    input::placeholder {
+      color: $color-special-dark-grey;
+      opacity: 1;
+    }
+
+    input:valid:hover {
+      border-color: $color-special-grey-7;
+    }
+
+    input:valid:focus {
+      border-color: $color-special-dark-grey;
+      border-width: 2px;
+      outline: none;
+    }
+
+    input:invalid:not(:placeholder-shown) {
+      border-color: $color-red;
+      border-width: 2px;
+    }
   }
 
   & .subtitle {
@@ -136,6 +156,7 @@
   }
 }
 
+// fieldset выбор необходимого параметра кота
 .program-form .needed-values {
   margin-top: 23px;
   margin-bottom: 23px;
@@ -147,15 +168,59 @@
     box-sizing: border-box;
   }
 
-  &__item:not(:last-of-type) {
-    margin-bottom: 25px;
-  }
-
-  &__label {
-    @include form_text;
+  @media (min-width: $desctop-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 39px;
   }
 }
 
+.needed-values__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: content-box;
+  cursor: pointer;
+
+  &:not(:last-of-type) {
+    margin-bottom: 25px;
+  }
+
+  &:hover .radio-mark {
+    outline-color: $color-special-grey-8;
+  }
+}
+
+.needed-values__mark {
+  display: inline;
+  width: 18px;
+  height: 18px;
+  outline: 1px solid $color-special-grey;
+  outline-offset: 10px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.needed__input:focus + .needed-values__mark {
+  background-color: $color-basic-green;
+}
+
+.needed__input[type="radio"]:checked + .needed-values__mark {
+  background-color: $color-basic-green;
+}
+
+.needed__input[type="radio"]:disabled + .needed-values__mark,
+.needed__input[type="radio"]:disabled + span + .needed-values__label {
+  opacity: 0.3;
+}
+
+.needed-values__label {
+  @include form_text;
+}
+
+
+// fieldset Контакты
 .contact-details {
   margin-top: 23px;
   margin-bottom: 23px;
@@ -240,8 +305,6 @@
     font-weight: 400;
     margin-bottom: 38px;
 
-    // @include green-line;
-
     @media (min-width: $tablet-width) {
       font-size: 36px;
       line-height: 36px;
@@ -265,7 +328,30 @@
 
     &::placeholder {
       color: $color-special-dark-grey;
+      opacity: 1;
     }
+
+    &:valid:hover {
+      border-color: $color-special-grey-7;
+    }
+
+    &:valid:focus {
+      border-color: $color-special-dark-grey;
+      border-width: 2px;
+      outline: none;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      border-color: $color-red;
+      border-width: 2px;
+    }
+  }
+}
+
+.program-form .additional {
+  @media (min-width: $tablet-width) {
+    flex-flow: row wrap;
+    justify-content: flex-start;
   }
 }
 
@@ -277,8 +363,6 @@
     font-weight: 400;
     margin-bottom: 39px;
 
-    // @include green-line;
-
     @media (min-width: $tablet-width) {
       font-size: 36px;
       line-height: 36px;
@@ -286,30 +370,56 @@
       margin-top: 24px;
     }
   }
+}
 
-  &__item:not(:last-of-type) {
+.additional__item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:not(:last-of-type) {
     margin-bottom: 20px;
-
-    @media (min-width: $tablet-width) {
-      width: 50%;
-    }
-
-    @media (min-width: $desctop-width) {
-      width: 25%;
-    }
   }
 
-  &__product {
-    @include form_text;
-    color: $color-black;
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: $desctop-width) {
+    width: 25%;
+    margin-bottom: 20px;
+  }
+
+  &:hover .additional__mark {
+    outline-color: $color-special-grey-8;
   }
 }
 
-.program-form .additional {
-  @media (min-width: $tablet-width) {
-    flex-flow: row wrap;
-    justify-content: flex-start;
-  }
+.additional__mark {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  outline: 1px solid $color-special-grey;
+  margin-right: 19px;
+  position: relative;
+}
+
+.additional__input[type="checkbox"]:checked + .additional__mark::after {
+  content: url("../../../img/icons/checkmark.svg");
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -40%);
+}
+
+.additional__input[type="checkbox"]:disabled + .additional__mark,
+.additional__input[type="checkbox"]:disabled + span + .additional__product {
+  opacity: 0.3;
+}
+
+.additional__product {
+  @include form_text;
+  color: $color-black;
 }
 
 .program-submit {
