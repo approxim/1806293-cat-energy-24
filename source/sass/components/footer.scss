@@ -63,8 +63,26 @@
   }
 
   &-social__icon {
-    display: block;
+    width: 40px;
+    height: 40px;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      fill: $color-special-grey-2;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover svg {
+      fill: $color-basic-green;
+    }
+
+    &:active svg {
+      opacity: 0.3;
+    }
   }
 }
 

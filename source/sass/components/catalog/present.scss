@@ -1,15 +1,34 @@
 .present {
-  background: url("../../img/spacecat.webp") no-repeat;
+  background-image: url("../../../img/photo/cat-present-mobile.jpg");
+  background-repeat: no-repeat;
   background-position: center;
-  background-size: 105% auto;
+  background-size: 100% auto;
   width: 100%;
   height: 290px;
   position: relative;
   margin-top: 55px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../../img/photo/cat-present-mobile-2x.jpg");
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../../../img/photo/cat-present-tablet.jpg");
+    background-size: auto 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../../img/photo/cat-present-tablet-2x.jpg");
+    }
+  }
+
   @media (min-width: $desctop-width) {
-    width: auto;
+    background-image: url("../../../img/photo/cat-present-desktop.jpg");
+    background-size: 100% auto;
     margin-top: 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../../img/photo/cat-present-desktop-2x.jpg");
+    }
   }
 
   &::after {

@@ -96,7 +96,6 @@
   &__list {
     display: none;
 
-
     @media (min-width: $tablet-width) {
       list-style-type: none;
       display: flex;
@@ -122,7 +121,6 @@
   }
 
   &__link {
-
     padding: 8px 0;
 
     @media (min-width: $tablet-width) {
@@ -139,26 +137,29 @@
       font-size: 20px;
     }
 
-    &--index {
-      @media (min-width: $desctop-width) {
-        color: $color-white;
+    img {
+      @media (min-width: $tablet-width) {
+        width: 60px;
+        height: auto;
+      }
 
-        &:hover {
-          color: rgba($color-white, .6);
-        }
+      @media (min-width: $desctop-width) {
+        width: 70px;
       }
     }
 
     &:hover {
-      color: rgba($color-black, .6);
+      color: rgba($color-black, 0.6);
     }
 
     &:active {
-      color: rgba($color-black, .3);
+      color: rgba($color-black, 0.3);
     }
 
     &--active {
-      border-bottom: 2px solid $color-basic-green;
+      @media (min-width: $tablet-width) {
+        border-bottom: 2px solid $color-basic-green;
+      }
     }
 
     &--index {
@@ -166,11 +167,11 @@
         color: $color-white;
 
         &:hover {
-          color: rgba($color-white, .6);
+          color: rgba($color-white, 0.6);
         }
 
         &:active {
-          color: rgba($color-white, .3);
+          color: rgba($color-white, 0.3);
         }
       }
     }
@@ -178,7 +179,6 @@
     &--index.nav__link--active {
       border-bottom-color: $color-white;
     }
-
   }
 
   &--closed .nav__list {
