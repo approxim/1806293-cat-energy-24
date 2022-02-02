@@ -72,7 +72,12 @@
             <a class="promo__button green-button" href="form.html">Подобрать программу</a>
           </div> <!-- /promo__wrapper -->
 
-          <img class="promo__pack" src="img/index-cat-mobile.webp" alt="упаковка корма" width="280" height="270">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/photo/pack-promo-tablet.png 1x, img/photo/pack-promo-tablet-2x.png 2x"></source>
+            <img class="promo__pack" src="img/photo/pack-promo-mobile.png" srcset="img/photo/pack-promo-mobile-2x.png 2x" width="280" height="270" alt="упаковка корма">
+          </picture>
+
+          <!-- <img class="promo__pack" src="img/photo/pack-promo-mobile.png" srcset="img/photo/pack-promo-mobile-2x.png 2x"  alt="упаковка корма" width="280" height="270"> -->
 
         </section> <!-- /Секция Промо -->
 
@@ -163,8 +168,11 @@
 
           <div class="result">
             <div class="result__item">
-              <img class="result__image fat-cat" src="img/fat-cat-mobile.webp" width="280" height="232" alt="кот до приема правильного корма">
-              <img class="result__image slim-cat" src="img/slim-cat-mobile.webp" width="243" height="232" alt="кот после приема правильного корма">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/photo/cat-result-desktop.png 1x, img/photo/cat-result-desktop-2x.png 2x"></source>
+                <source media="(min-width: 768px)" srcset="img/photo/cat-result-tablet.png 1x, img/photo/cat-result-tablet-2x.png 2x"></source>
+                <img class="result__image fat-cat" src="img/photo/cat-result-mobile.png" srcset="img/photo/cat-result-mobile-2x.png 2x" width="280" height="232" alt="кот до приема правильного корма и после">
+              </picture>
             </div>
             <div class="result__buttons">
               <button class="result__button result__button-before" type="button">Было</button>

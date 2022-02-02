@@ -62,129 +62,6 @@
   display: flex;
   justify-content: flex-end;
 
-  // Кнопка бургер
-  &__toggle {
-    border: none;
-    padding: 8px 12px;
-    position: relative;
-    cursor: pointer;
-    background-color: transparent;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-
-    &::before,
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      right: 0;
-      width: 24px;
-      height: 1.5px;
-      background-color: $color-black;
-      transition: transform 0.2s ease;
-    }
-
-    &::before {
-      top: 0;
-      box-shadow: 0 8px 0 0 $color-black;
-    }
-
-    &::after {
-      bottom: 0;
-    }
-  }
-
-  // Список меню
-  &__list {
-    display: none;
-
-    @media (min-width: $tablet-width) {
-      list-style-type: none;
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-end;
-    }
-
-    @media (min-width: $desctop-width) {
-      width: 45vw;
-    }
-
-    &--closed {
-      display: none;
-    }
-
-    &--opened {
-      display: flex;
-    }
-  }
-
-  &__item {
-    margin-left: 36px;
-  }
-
-  &__link {
-    padding: 8px 0;
-
-    @media (min-width: $tablet-width) {
-      font-size: 18px;
-      line-height: 24px;
-      text-decoration: none;
-      color: $color-black;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    @media (min-width: $desctop-width) {
-      color: $color-black;
-      font-size: 20px;
-    }
-
-    img {
-      @media (min-width: $tablet-width) {
-        width: 60px;
-        height: auto;
-      }
-
-      @media (min-width: $desctop-width) {
-        width: 70px;
-      }
-    }
-
-    &:hover {
-      color: rgba($color-black, 0.6);
-    }
-
-    &:active {
-      color: rgba($color-black, 0.3);
-    }
-
-    &--active {
-      @media (min-width: $tablet-width) {
-        border-bottom: 2px solid $color-basic-green;
-      }
-    }
-
-    &--index {
-      @media (min-width: $desctop-width) {
-        color: $color-white;
-
-        &:hover {
-          color: rgba($color-white, 0.6);
-        }
-
-        &:active {
-          color: rgba($color-white, 0.3);
-        }
-      }
-    }
-
-    &--index.nav__link--active {
-      border-bottom-color: $color-white;
-    }
-  }
-
   &--closed .nav__list {
     display: none;
 
@@ -242,5 +119,130 @@
   &--opened .nav__toggle::after {
     top: 50%;
     transform: rotate(-45deg);
+  }
+}
+
+// Кнопка бургер
+.nav__toggle {
+  border: none;
+  padding: 8px 12px;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 24px;
+    height: 1.5px;
+    background-color: $color-black;
+    transition: transform 0.2s ease;
+  }
+
+  &::before {
+    top: 0;
+    box-shadow: 0 8px 0 0 $color-black;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+
+// Список меню
+.nav__list {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $desctop-width) {
+    width: 45vw;
+  }
+
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    display: flex;
+  }
+}
+
+.nav__item {
+  margin-left: 36px;
+}
+
+.nav__link {
+  padding: 8px 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: $color-black;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  @media (min-width: $desctop-width) {
+    color: $color-black;
+    font-size: 20px;
+  }
+
+  &:hover {
+    color: rgba($color-black, 0.6);
+  }
+
+  &:active {
+    color: rgba($color-black, 0.3);
+  }
+
+  &--active {
+    @media (min-width: $tablet-width) {
+      border-bottom: 2px solid $color-basic-green;
+    }
+  }
+
+  &--index {
+    @media (min-width: $desctop-width) {
+      color: $color-white;
+
+      &:hover {
+        color: rgba($color-white, 0.6);
+      }
+
+      &:active {
+        color: rgba($color-white, 0.3);
+      }
+    }
+  }
+
+  &--index.nav__link--active {
+    @media (min-width: $desctop-width) {
+      border-bottom-color: $color-white;
+    }
+  }
+}
+
+.header__logo-cat {
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: auto;
+  }
+
+  @media (min-width: $desctop-width) {
+    width: 70px;
   }
 }

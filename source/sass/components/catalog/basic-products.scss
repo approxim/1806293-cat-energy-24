@@ -129,12 +129,16 @@
   justify-self: center;
   align-self: center;
 
-  // Временные
   @media (min-width: $tablet-width) {
     width: auto;
+    height: 200px;
     grid-row: -3 / -4;
     position: absolute;
     bottom: 0;
+
+    &--small {
+      height: 173px;
+    }
   }
 }
 
