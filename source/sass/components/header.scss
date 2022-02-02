@@ -14,15 +14,19 @@
     z-index: 100;
   }
 
-  &__container {
-    display: flex;
-    align-items: center;
-  }
-
   &--catalog,
   &--form {
     border-bottom: 1px solid $color-special-grey;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+    }
   }
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
 }
 
 .logo-link {

@@ -38,82 +38,82 @@
       display: none;
     }
   }
+}
 
-  // Форма
-  &-form {
+// Форма
+.program-form {
+  display: flex;
+  flex-direction: column;
+
+  fieldset {
+    border: none;
     display: flex;
-    flex-direction: column;
-
-    fieldset {
-      border: none;
-      display: flex;
-      flex-flow: column nowrap;
-      padding: 0;
-      width: 100%;
-    }
-
-    &__wrap {
-      display: flex;
-      flex-direction: column;
-
-      @media (min-width: $desctop-width) {
-        flex-direction: row;
-        gap: 80px;
-      }
-
-      fieldset {
-        @include gray-line;
-
-        @media (min-width: $desctop-width) {
-          width: 50%;
-          margin: 0;
-        }
-
-        &::after {
-          bottom: -23px;
-
-          @media (min-width: $tablet-width) {
-            display: none;
-          }
-        }
-      }
-    }
-
-    input::placeholder {
-      color: $color-special-dark-grey;
-      opacity: 1;
-    }
-
-    input:valid:hover {
-      border-color: $color-special-grey-7;
-    }
-
-    input:valid:focus {
-      border-color: $color-special-dark-grey;
-      border-width: 2px;
-      outline: none;
-    }
-
-    input:invalid:not(:placeholder-shown) {
-      border-color: $color-red;
-      border-width: 2px;
-    }
+    flex-flow: column nowrap;
+    padding: 0;
+    width: 100%;
   }
 
-  & .subtitle {
-    text-transform: uppercase;
-    font-size: 14px;
-    line-height: 18px;
-    padding-right: 40px;
-    margin-bottom: 17px;
+  input::placeholder {
+    color: $color-special-dark-grey;
+    opacity: 1;
+  }
 
-    @media (min-width: $tablet-width) {
-      font-size: 20px;
-      line-height: 30px;
-      width: 330px;
-      margin-top: 55px;
-      margin-bottom: 42px;
+  input:valid:hover {
+    border-color: $color-special-grey-7;
+  }
+
+  input:valid:focus {
+    border-color: $color-special-dark-grey;
+    border-width: 2px;
+    outline: none;
+  }
+
+  input:invalid:not(:placeholder-shown) {
+    border-color: $color-red;
+    border-width: 2px;
+  }
+}
+
+.program-form__wrap {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desctop-width) {
+    flex-direction: row;
+    gap: 80px;
+  }
+
+  fieldset {
+    @include gray-line;
+
+    @media (min-width: $desctop-width) {
+      width: 50%;
+      margin: 0;
     }
+
+    &::after {
+      bottom: -23px;
+
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
+    }
+  }
+}
+
+.program .subtitle {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  padding-right: 40px;
+  margin-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    width: 330px;
+    margin-top: 55px;
+    margin-bottom: 42px;
   }
 }
 
@@ -125,34 +125,34 @@
     margin-bottom: 72px;
     grid-column: span 2;
   }
+}
 
-  &__item {
-    @include form_text;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.initial-values__item {
+  @include form_text;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 13px;
 
     @media (min-width: $tablet-width) {
-      font-size: 20px;
+      margin-bottom: 22px;
     }
+  }
 
-    &:not(:last-of-type) {
-      margin-bottom: 13px;
+  span {
+    white-space: nowrap;
+    margin-right: 13px;
+  }
 
-      @media (min-width: $tablet-width) {
-        margin-bottom: 22px;
-      }
-    }
-
-    span {
-      white-space: nowrap;
-      margin-right: 13px;
-    }
-
-    input {
-      @include form_text;
-      @include form_input;
-    }
+  input {
+    @include form_text;
+    @include form_input;
   }
 }
 
@@ -219,7 +219,6 @@
   @include form_text;
 }
 
-
 // fieldset Контакты
 .contact-details {
   margin-top: 23px;
@@ -244,29 +243,6 @@
     }
   }
 
-  &__item {
-    color: $color-special-dark-grey;
-    display: flex;
-    align-items: center;
-    margin-bottom: 13px;
-    position: relative;
-
-    @include form_text;
-
-    @media (min-width: $tablet-width) {
-      margin-bottom: 22px;
-    }
-
-    @media (min-width: $desctop-width) {
-      width: 50%;
-    }
-
-    span {
-      margin-right: 13px;
-      white-space: nowrap;
-    }
-  }
-
   input {
     @include form_input;
     @include form_text;
@@ -275,44 +251,51 @@
       fill: $color-basic-green;
     }
   }
+}
 
+.contact-details__icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
 
-  // input:valid:hover {
-  //   border-color: $color-special-grey-7;
-  // }
-
-  // input:valid:focus {
-  //   border-color: $color-special-dark-grey;
-  //   border-width: 2px;
-  //   outline: none;
-  // }
-
-  // input:invalid:not(:placeholder-shown) {
-  //   border-color: $color-red;
-  //   border-width: 2px;
-  // }
-
-  &__icon {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-
-    &--tel {
-      right: 13px;
-
-      @media (min-width: $tablet-width) {
-        right: 17px;
-      }
-    }
+  &--tel {
+    right: 13px;
 
     @media (min-width: $tablet-width) {
-      right: 19px;
+      right: 17px;
     }
+  }
 
-    @media (min-width: $desctop-width) {
-      right: 20px;
-    }
+  @media (min-width: $tablet-width) {
+    right: 19px;
+  }
+
+  @media (min-width: $desctop-width) {
+    right: 20px;
+  }
+}
+
+.contact-details__item {
+  color: $color-special-dark-grey;
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+  position: relative;
+
+  @include form_text;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $desctop-width) {
+    width: 50%;
+  }
+
+  span {
+    margin-right: 13px;
+    white-space: nowrap;
   }
 }
 
@@ -353,40 +336,40 @@
       margin-bottom: 75px;
     }
   }
+}
 
-  &__field {
-    min-width: 200px;
-    width: 100%;
-    padding: 10px 15px;
-    box-sizing: border-box;
-    border: 1px solid $color-special-grey-3;
+.comment__field {
+  min-width: 200px;
+  width: 100%;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border: 1px solid $color-special-grey-3;
 
-    @include form_text;
+  @include form_text;
 
-    @media (min-width: $tablet-width) {
-      padding: 11px 19px;
-      height: 174px;
-    }
+  @media (min-width: $tablet-width) {
+    padding: 11px 19px;
+    height: 174px;
+  }
 
-    &::placeholder {
-      color: $color-special-dark-grey;
-      opacity: 1;
-    }
+  &::placeholder {
+    color: $color-special-dark-grey;
+    opacity: 1;
+  }
 
-    &:valid:hover {
-      border-color: $color-special-grey-7;
-    }
+  &:valid:hover {
+    border-color: $color-special-grey-7;
+  }
 
-    &:valid:focus {
-      border-color: $color-special-dark-grey;
-      border-width: 2px;
-      outline: none;
-    }
+  &:valid:focus {
+    border-color: $color-special-dark-grey;
+    border-width: 2px;
+    outline: none;
+  }
 
-    &:invalid:not(:placeholder-shown) {
-      border-color: $color-red;
-      border-width: 2px;
-    }
+  &:invalid:not(:placeholder-shown) {
+    border-color: $color-red;
+    border-width: 2px;
   }
 }
 
@@ -473,30 +456,30 @@
     align-items: center;
     margin-top: 58px;
   }
+}
 
-  &__button {
-    width: 100%;
-    margin-top: 34px;
-    margin-bottom: 20px;
+.program-submit__button {
+  width: 100%;
+  margin-top: 34px;
+  margin-bottom: 20px;
 
-    @media (min-width: $tablet-width) {
-      display: inline-block;
-      width: 45%;
-      margin: 0 60px 0 0;
-      font-size: 20px;
-    }
-
-    @media (min-width: $desctop-width) {
-      margin-right: 80px;
-    }
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    width: 45%;
+    margin: 0 60px 0 0;
+    font-size: 20px;
   }
 
-  &__required-field {
-    font-family: $font-secondary;
-    margin: 0 auto 32px;
+  @media (min-width: $desctop-width) {
+    margin-right: 80px;
+  }
+}
 
-    @media (min-width: $tablet-width) {
-      margin: 0;
-    }
+.program-submit__required-field {
+  font-family: $font-secondary;
+  margin: 0 auto 32px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
   }
 }
