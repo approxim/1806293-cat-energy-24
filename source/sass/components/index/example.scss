@@ -1,174 +1,178 @@
 .example {
   background-color: $color-special-grey-4;
   padding-top: 25px;
-  padding-bottom: 40px;
+  padding-bottom: 45px;
 
   @media (min-width: $tablet-width) {
-    background: linear-gradient(to bottom, $color-white 0%, $color-white 60%, $color-special-grey-4 60%, $color-special-grey-4 100%);
+    background: linear-gradient(to bottom, $color-white 0%, $color-white 57%, $color-special-grey-4 57%, $color-special-grey-4 100%);
     padding-top: 45px;
+    padding-bottom: 61px;
   }
 
   @media (min-width: $desctop-width) {
-    background: linear-gradient(to bottom, $color-white 0%, $color-white 25%, $color-basic-grey 25%, $color-basic-grey 100%);
+    background: linear-gradient(to bottom, $color-white 0%, $color-white 28.5%, $color-basic-grey 28.5%, $color-basic-grey 100%);
     display: flex;
     flex-direction: row;
+    padding-top: 47px;
+    padding-bottom: 70px;
+  }
+}
+
+.example__wrapper {
+  @media (min-width: $desctop-width) {
+    width: 50%;
+  }
+}
+
+.example__title {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  margin: 0 0 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 62px;
   }
 
-  &__wrapper {
-    @media (min-width: $desctop-width) {
-      width: 50%;
-    }
+  @media (min-width: $desctop-width) {
+    margin-bottom: 145px;
+  }
+}
+
+.example__text {
+  font-family: $font-secondary;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-special-dark-grey;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 54px;
+    padding-right: 10px;
   }
 
-  &__title {
-    font-size: 36px;
-    line-height: 40px;
-    font-weight: 400;
-    margin: 0 0 40px;
-
-    @media (min-width: $tablet-width) {
-      font-size: 60px;
-      line-height: 60px;
-      margin-bottom: 65px;
-    }
-
-    @media (min-width: $desctop-width) {
-      margin-bottom: 145px;
-    }
+  @media (min-width: $desctop-width) {
+    width: 435px;
+    margin-bottom: 72px;
   }
+}
 
-  &__text {
-    font-family: $font-secondary;
-    font-size: 14px;
-    line-height: 18px;
-    color: $color-special-dark-grey;
-    margin: 0;
-    margin-bottom: 20px;
-
-    @media (min-width: $tablet-width) {
-      font-size: 16px;
-      line-height: 24px;
-      margin-bottom: 65px;
-    }
-
-    @media (min-width: $desctop-width) {
-      width: 435px;
-      margin-bottom: 72px;
-    }
-  }
-
-  &__item {
-    @media (min-width: $tablet-width) {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-
-    @media (min-width: $desctop-width) {
-      flex-direction: column;
-    }
-  }
-
-  &__profit {
-    margin: 0;
-    text-align: center;
+.example__item {
+  @media (min-width: $tablet-width) {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  @media (min-width: $desctop-width) {
+    flex-direction: column;
+  }
+}
+
+.example__profit {
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    width: 366px;
+  }
+
+  dl {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  dl:first-child {
+    margin-right: 32px;
 
     @media (min-width: $tablet-width) {
-      width: 366px;
-    }
-
-    dl {
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    dl:first-child {
-      margin-right: 32px;
-
-      @media (min-width: $tablet-width) {
-        margin-right: 42px;
-      }
-    }
-
-    dt {
-      font-size: 24px;
-      line-height: 24px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-      white-space: nowrap;
-      padding: 14px 0 18px;
-      border: 1px solid $color-special-grey;
-      border-radius: 3px;
-      box-sizing: border-box;
-      width: 124px;
-
-      @media (min-width: $tablet-width) {
-        font-size: 30px;
-        line-height: 37px;
-        width: 162px;
-      }
-    }
-
-    dd {
-      font-family: $font-secondary;
-      font-size: 12px;
-      line-height: 12px;
-      color: $color-special-dark-grey;
-      width: 80px;
-      background-color: $color-special-grey-4;
-      padding: 0 5px;
-      margin: -18px 0 0;
-
-      @media (min-width: $tablet-width) {
-        font-size: 14px;
-        line-height: 14px;
-        background-color: $color-white;
-        width: auto;
-        padding: 0 10px;
-      }
-
-      @media (min-width: $desctop-width) {
-        background-color: $color-basic-grey;
-      }
+      margin-right: 42px;
     }
   }
 
-  &__expenses {
-    font-size: 14px;
-    line-height: 20px;
+  dt {
+    font-size: 24px;
+    line-height: 24px;
     text-transform: uppercase;
-    text-align: center;
-    margin: 20px;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    padding: 14px 0 18px;
+    border: 1px solid $color-special-grey;
+    border-radius: 3px;
+    box-sizing: border-box;
+    width: 124px;
 
     @media (min-width: $tablet-width) {
-      font-size: 20px;
-      display: flex;
-      flex-flow: column;
-      align-items: flex-end;
-      justify-content: center;
-      margin: 12px 0 0 0;
+      font-size: 30px;
+      line-height: 37px;
+      width: 162px;
+    }
+  }
+
+  dd {
+    font-family: $font-secondary;
+    font-size: 12px;
+    line-height: 12px;
+    color: $color-special-dark-grey;
+    width: 80px;
+    background-color: $color-special-grey-4;
+    padding: 0 5px;
+    margin: -18px 0 0;
+
+    @media (min-width: $tablet-width) {
+      font-size: 14px;
+      line-height: 14px;
+      background-color: $color-white;
+      width: auto;
+      padding: 0 10px;
     }
 
     @media (min-width: $desctop-width) {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      width: 325px;
-      margin-top: 55px;
+      background-color: $color-basic-grey;
+    }
+  }
+}
+
+.example__expenses {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 17px 20px 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 12px 0 0 0;
+  }
+
+  @media (min-width: $desctop-width) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 325px;
+    margin-top: 55px;
+  }
+
+  span:first-child {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 10px;
     }
 
-    span:first-child {
-      @media (min-width: $tablet-width) {
-        margin-bottom: 10px;
-      }
-
-      @media (min-width: $desctop-width) {
-        margin-bottom: 0;
-      }
+    @media (min-width: $desctop-width) {
+      margin-bottom: 0;
     }
   }
 }

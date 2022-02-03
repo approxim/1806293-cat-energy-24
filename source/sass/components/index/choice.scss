@@ -1,163 +1,198 @@
 .choice {
+  @media (min-width: $tablet-width) {
+    margin-top: 6px;
+  }
+
   @media (min-width: $desctop-width) {
     display: flex;
     column-gap: 80px;
   }
+}
 
-  &__item {
-    background-color: $color-basic-grey;
-    margin-top: 30px;
-    padding: 20px;
-    display: grid;
+.choice__item {
+  background-color: $color-basic-grey;
+  margin-top: 20px;
+  padding: 20px;
+  display: grid;
+  grid-template-areas:
+    "choice__img choice__title"
+    "choice__description choice__description"
+    "choice__link choice__link";
+  grid-template-columns: 50px auto;
+  column-gap: 20px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    padding: 77px 50px 57px;
+    grid-template-columns: auto 220px;
+    grid-template-areas:
+      "choice__title choice__img"
+      "choice__description choice__img"
+      "choice__link choice__img";
+    column-gap: 20px;
+  }
+
+  @media (min-width: $desctop-width) {
+    padding: 40px 50px 60px;
+    grid-template-columns: 100px auto;
     grid-template-areas:
       "choice__img choice__title"
       "choice__description choice__description"
       "choice__link choice__link";
-    grid-template-columns: 50px auto;
-    column-gap: 20px;
-    align-items: center;
+    width: 50%;
+    column-gap: 65px;
+    margin-top: 80px;
+  }
+}
 
-    @media (min-width: $tablet-width) {
-      padding: 77px 50px 57px;
-      grid-template-columns: auto 200px;
-      grid-template-areas:
-        "choice__title choice__img"
-        "choice__description choice__img"
-        "choice__link choice__img";
-      column-gap: 40px;
-    }
-
-    @media (min-width: $desctop-width) {
-      padding: 40px 50px 60px;
-      grid-template-columns: 100px auto;
-      grid-template-areas:
-        "choice__img choice__title"
-        "choice__description choice__description"
-        "choice__link choice__link";
-      width: 50%;
-      column-gap: 65px;
-      margin-top: 80px;
-    }
+.choice__slimming {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
   }
 
-  &__img {
-    grid-area: choice__img;
-    justify-self: center;
+  @media (min-width: $desctop-width) {
+    margin-bottom: 0;
+  }
+}
 
-    @media (min-width: $tablet-width) {
-      width: auto;
-      height: auto;
-      max-height: 211px;
-      max-width: 268px;
-    }
-
-    @media (min-width: $desctop-width) {
-      width: auto;
-      height: auto;
-      max-height: 106px;
-      max-width: 134px;
-    }
+.choice__weight-gain {
+  @media (min-width: $tablet-width) {
+    column-gap: 0;
   }
 
-  &__title {
-    font-size: 24px;
-    line-height: 37px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: $color-black;
-    margin: 0;
-    grid-area: choice__title;
+  @media (min-width: $desctop-width) {
+    column-gap: 64px;
+  }
+}
 
-    @media (min-width: $tablet-width) {
-      font-size: 36px;
-      line-height: 36px;
-    }
+.choice__weight-gain .choice__img {
+  align-self: center;
+}
+
+.choice__weight-gain .choice__description {
+  // margin-top: 40px;
+}
+
+.choice__img {
+  grid-area: choice__img;
+  justify-self: center;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    height: auto;
+    max-height: 211px;
+    max-width: 268px;
+    align-self: flex-start;
   }
 
-  &__description {
-    font-family: $font-secondary;
-    font-size: 14px;
-    line-height: 18px;
-    color: $color-special-dark-grey;
-    position: relative;
-    margin: 19px 0 0;
-    grid-area: choice__description;
-
-    @media (min-width: $tablet-width) {
-      font-size: 16px;
-      line-height: 24px;
-      padding-right: 45px;
-    }
-
-    @media (min-width: $desctop-width) {
-      margin-top: 34px;
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: -21px;
-      background-color: #d9d9d9;
-      width: 100%;
-      height: 1px;
-
-      @media (min-width: $tablet-width) {
-        display: none;
-      }
-    }
+  @media (min-width: $desctop-width) {
+    width: auto;
+    height: auto;
+    max-height: 106px;
+    max-width: 134px;
   }
+}
 
-  &__link {
-    margin-top: 42px;
-    display: flex;
-    align-items: center;
+.choice__title {
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $color-black;
+  margin: 0;
+  grid-area: choice__title;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.choice__description {
+  font-family: $font-secondary;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-special-dark-grey;
+  position: relative;
+  margin: 24px 0 0;
+  grid-area: choice__description;
+
+  @media (min-width: $tablet-width) {
     font-size: 16px;
-    line-height: 16px;
-    font-weight: 400;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: $color-black;
-    position: relative;
-    white-space: nowrap;
-    grid-area: choice__link;
+    line-height: 24px;
+    padding-right: 45px;
+  }
+
+  @media (min-width: $desctop-width) {
+    margin-top: 35px;
+    padding-right: 27px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -21px;
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 1px;
 
     @media (min-width: $tablet-width) {
-      font-size: 20px;
-      line-height: 30px;
-      margin-top: 50px;
+      display: none;
+    }
+  }
+}
+
+.choice__link {
+  margin-top: 42px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-black;
+  position: relative;
+  white-space: nowrap;
+  grid-area: choice__link;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 52px;
+  }
+
+  @media (min-width: $desctop-width) {
+    margin-top: 28px;
+  }
+
+  img {
+    margin-left: 10px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 25px;
     }
 
     @media (min-width: $desctop-width) {
-      margin-top: 10px;
+      margin-left: 28px;
     }
+  }
 
-    img {
-      margin-left: 15px;
+  &:hover {
+    color: rgba($color-black, 0.6);
+  }
 
-      @media (min-width: $tablet-width) {
-        margin-left: 25px;
-      }
+  &:hover img {
+    opacity: 0.6;
+  }
 
-      @media (min-width: $desctop-width) {
-        margin-left: 28px;
-      }
-    }
+  &:active {
+    color: rgba($color-black, 0.3);
+  }
 
-    &:hover {
-      color: rgba($color-black, 0.6);
-    }
-
-    &:hover img {
-      opacity: 0.6;
-    }
-
-    &:active {
-      color: rgba($color-black, 0.3);
-    }
-
-    &:active img {
-      opacity: 0.3;
-    }
+  &:active img {
+    opacity: 0.3;
   }
 }

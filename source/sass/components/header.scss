@@ -1,14 +1,16 @@
 .header {
   width: 100%;
-  padding: 11px 0;
+  padding: 11px 0 11px;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     border: none;
+    padding-top: 26px;
   }
 
   @media (min-width: $desctop-width) {
-    margin-top: 60px;
+    margin-top: 53px;
+    padding-top: 0;
     background-color: transparent;
     position: absolute;
     z-index: 100;
@@ -33,7 +35,7 @@
   margin-right: auto;
 
   @media (min-width: $tablet-width) {
-    margin-right: 12px;
+    margin-right: 5px;
   }
 
   &:hover {
@@ -45,9 +47,24 @@
   }
 }
 
+.header__logo-cat {
+  @media (min-width: $tablet-width) {
+    width: 61px;
+    height: auto;
+  }
+
+  @media (min-width: $desctop-width) {
+    width: 70px;
+  }
+}
+
 .logo-text {
-  margin-right: auto;
-  padding: 8px 8px 0 0;
+  margin: 0 auto 0 -7px;
+  padding: 8px 5px 5px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 1px;
+  }
 
   &:hover {
     opacity: 0.8;
@@ -55,6 +72,21 @@
 
   &:active {
     opacity: 0.6;
+  }
+
+  &--header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.logo-text__img {
+  width: 104px;
+  height: auto;
+
+  @media (min-width: $desctop-width) {
+    width: 120px;
   }
 }
 
@@ -129,6 +161,7 @@
   position: relative;
   cursor: pointer;
   background-color: transparent;
+  margin-top: -3px;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -233,16 +266,5 @@
     @media (min-width: $desctop-width) {
       border-bottom-color: $color-white;
     }
-  }
-}
-
-.header__logo-cat {
-  @media (min-width: $tablet-width) {
-    width: 60px;
-    height: auto;
-  }
-
-  @media (min-width: $desctop-width) {
-    width: 70px;
   }
 }
