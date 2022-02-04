@@ -110,11 +110,35 @@ main {
     content: "";
     display: block;
     position: absolute;
-    bottom: -37px;
+    bottom: -41px;
     left: 50%;
     transform: translateX(-50%);
     width: 100vw;
     height: 1px;
     background-color: $color-special-grey;
+  }
+}
+
+.main__title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  margin: 27px 0 41px;
+  position: relative;
+
+  @include gray-line;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 46px 0 10px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desctop-width) {
+    margin-top: 188px;
   }
 }

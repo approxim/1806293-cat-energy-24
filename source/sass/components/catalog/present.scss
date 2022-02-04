@@ -13,8 +13,10 @@
   }
 
   @media (min-width: $tablet-width) {
+    height: 200px;
     background-image: url("../../../img/photo/cat-present-tablet.jpg");
     background-size: auto 100%;
+    margin-top: 68px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../../img/photo/cat-present-tablet-2x.jpg");
@@ -22,6 +24,7 @@
   }
 
   @media (min-width: $desctop-width) {
+    height: 290px;
     background-image: url("../../../img/photo/cat-present-desktop.jpg");
     background-size: 100% auto;
     margin-top: 0;
@@ -42,29 +45,61 @@
     top: 0;
     left: 0;
   }
+}
 
-  &__info {
-    display: flex;
+.present__info {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  height: 100%;
+  z-index: 20;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    flex-flow: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desctop-width) {
     flex-flow: column;
-    align-items: center;
-    justify-content: space-evenly;
-    position: relative;
-    height: 100%;
-    z-index: 20;
-    margin: 0 auto;
+    justify-content: space-between;
+  }
+}
+
+.present__icon {
+  margin: 8px 0 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 9px 90px;
   }
 
-  &__icon {
-    margin: 10px 0 0;
+  @media (min-width: $desctop-width) {
+    margin: 0;
+    margin-top: 65px;
+  }
+}
+
+.present__text {
+  font-family: $font-secondary;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-white;
+  margin: 0 0 -18px;
+  text-align: center;
+  width: 182px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    text-align: left;
+    margin-right: 105px;
   }
 
-  &__text {
-    font-family: $font-secondary;
-    font-size: 16px;
-    line-height: 20px;
-    color: $color-white;
+  @media (min-width: $desctop-width) {
     margin: 0;
     text-align: center;
-    width: 182px;
+    margin-bottom: 42px;
+
   }
 }

@@ -15,14 +15,14 @@
     position: absolute;
     z-index: 100;
   }
+}
 
-  &--catalog,
-  &--form {
-    border-bottom: 1px solid $color-special-grey;
+.header--catalog,
+.header--form {
+  border-bottom: 1px solid $color-special-grey;
 
-    @media (min-width: $tablet-width) {
-      border: none;
-    }
+  @media (min-width: $tablet-width) {
+    border: none;
   }
 }
 
@@ -157,11 +157,11 @@
 // Кнопка бургер
 .nav__toggle {
   border: none;
-  padding: 8px 12px;
+  padding: 0.55em 12px;
   position: relative;
   cursor: pointer;
   background-color: transparent;
-  margin-top: -3px;
+  // margin-top: -3px;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -174,14 +174,14 @@
     position: absolute;
     right: 0;
     width: 24px;
-    height: 1.5px;
+    height: 0.1em;
     background-color: $color-black;
     transition: transform 0.2s ease;
   }
 
   &::before {
     top: 0;
-    box-shadow: 0 8px 0 0 $color-black;
+    box-shadow: 0 0.5em 0 0 $color-black;
   }
 
   &::after {
@@ -227,6 +227,7 @@
     color: $color-black;
     text-transform: uppercase;
     white-space: nowrap;
+    padding-bottom: 5px;
   }
 
   @media (min-width: $desctop-width) {
