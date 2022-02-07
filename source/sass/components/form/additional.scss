@@ -1,0 +1,130 @@
+.program-form .additional {
+  @media (min-width: $tablet-width) {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
+}
+
+.additional {
+  legend {
+    font-size: 24px;
+    line-height: 24px;
+    color: $color-black;
+    font-weight: 400;
+    margin-bottom: 35px;
+    margin-left: -4px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 36px;
+      line-height: 36px;
+      margin-bottom: 61px;
+      margin-top: 24px;
+    }
+  }
+}
+
+.additional__item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:not(:last-of-type) {
+    margin-bottom: 14px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 40%;
+
+    &:nth-of-type(-n+2) {
+      margin-bottom: 34px;
+    }
+
+    &:nth-of-type(odd) {
+      margin-right: 92px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 20%;
+
+    &:nth-of-type(-n+2) {
+      margin-bottom: 0;
+    }
+
+    &:nth-of-type(odd) {
+      margin-right: 0;
+    }
+  }
+
+  &:hover .additional__mark {
+    outline-color: $color-special-grey-8;
+  }
+}
+
+.additional__mark {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  outline: 1px solid $color-special-grey;
+  margin-right: 17px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+// Зеленая галочка
+.additional__input[type="checkbox"]:checked + .additional__mark::before,
+.additional__input[type="checkbox"]:checked + .additional__mark::after {
+  content: "";
+  height: 0.11em;
+  background-color: $color-basic-green;
+  position: absolute;
+
+  @media (min-width: $tablet-width) {
+    height: 2px;
+  }
+}
+
+.additional__input[type="checkbox"]:checked + .additional__mark::before {
+  width: 10px;
+  top: 61%;
+  transform: translate(4px, -1px) rotate(50deg);
+
+  @media (min-width: $tablet-width) {
+    width: 10px;
+    transform: translate(8px, 0) rotate(50deg);
+  }
+}
+
+.additional__input[type="checkbox"]:checked + .additional__mark::after {
+  width: 17px;
+  top: 50%;
+  right: 0;
+  transform: translateX(-2px) rotate(-50deg);
+
+  @media (min-width: $tablet-width) {
+    width: 23px;
+    transform: translateX(-3px) rotate(-50deg);
+  }
+}
+
+.additional__input[type="checkbox"]:disabled + .additional__mark,
+.additional__input[type="checkbox"]:disabled + span + .additional__product {
+  opacity: 0.3;
+}
+
+.additional__product {
+  @include form_text;
+  color: $color-black;
+}

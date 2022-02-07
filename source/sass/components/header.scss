@@ -31,7 +31,7 @@
   align-items: center;
 }
 
-.logo-link {
+.header__logo-link {
   margin-right: auto;
 
   @media (min-width: $tablet-width) {
@@ -58,7 +58,7 @@
   }
 }
 
-.logo-text {
+.header__logo-text {
   margin: 0 auto 0 -7px;
   padding: 8px 5px 5px;
 
@@ -79,193 +79,14 @@
     justify-content: center;
     align-items: center;
   }
-}
 
-.logo-text__img {
-  width: 104px;
-  height: auto;
+  img {
+    width: 104px;
+    height: auto;
 
-  @media (min-width: $desktop-width) {
-    width: 120px;
-  }
-}
-
-.nav {
-  display: flex;
-  justify-content: flex-end;
-
-  &--closed .nav__list {
-    display: none;
-
-    @media (min-width: $tablet-width) {
-      display: flex;
-    }
-  }
-
-  &--opened .nav__list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 65px;
-    left: 0;
-    right: 0;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    background-color: $color-white;
-    z-index: 500;
-  }
-
-  &--opened .nav__item {
-    margin: 0;
-    padding: 22.5px 15px;
-    border-top: 1px solid $color-special-grey-5;
-    display: block;
-    width: 100%;
-  }
-
-  &--opened .nav__item:last-child {
-    border-bottom: 1px solid $color-special-grey-5;
-  }
-
-  &--opened a {
-    display: block;
-    text-decoration: none;
-    color: $color-black;
-    font-weight: bolder;
-    font-size: 20px;
-    line-height: 20px;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-  // кнопка при закрытой менюшке
-  &--opened .nav__toggle::before {
-    top: 50%;
-    transform: rotate(45deg);
-    box-shadow: none;
-  }
-
-  &--opened .nav__toggle::after {
-    top: 50%;
-    transform: rotate(-45deg);
-  }
-}
-
-// Кнопка бургер
-.nav__toggle {
-  border: none;
-  padding: 0.55em 12px;
-  position: relative;
-  cursor: pointer;
-  background-color: transparent;
-  // margin-top: -3px;
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    right: 0;
-    width: 24px;
-    height: 0.1em;
-    background-color: $color-black;
-    transition: transform 0.2s ease;
-  }
-
-  &::before {
-    top: 0;
-    box-shadow: 0 0.5em 0 0 $color-black;
-  }
-
-  &::after {
-    bottom: 0;
-  }
-}
-
-// Список меню
-.nav__list {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    list-style-type: none;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 45vw;
-  }
-
-  &--closed {
-    display: none;
-  }
-
-  &--opened {
-    display: flex;
-  }
-}
-
-.nav__item {
-  margin-left: 36px;
-}
-
-.nav__link {
-  padding: 8px 0;
-
-  @media (min-width: $tablet-width) {
-    font-size: 18px;
-    line-height: 24px;
-    text-decoration: none;
-    color: $color-black;
-    text-transform: uppercase;
-    white-space: nowrap;
-    padding-bottom: 5px;
-  }
-
-  @media (min-width: $desktop-width) {
-    color: $color-black;
-    font-size: 20px;
-  }
-
-  &:hover {
-    color: rgba($color-black, 0.6);
-  }
-
-  &:active {
-    color: rgba($color-black, 0.3);
-  }
-
-  &--active {
-    @media (min-width: $tablet-width) {
-      border-bottom: 2px solid $color-basic-green;
-    }
-  }
-
-  &--index {
     @media (min-width: $desktop-width) {
-      color: $color-white;
-
-      &:hover {
-        color: rgba($color-white, 0.6);
-      }
-
-      &:active {
-        color: rgba($color-white, 0.3);
-      }
-    }
-  }
-
-  &--index.nav__link--active {
-    @media (min-width: $desktop-width) {
-      border-bottom-color: $color-white;
+      width: 120px;
     }
   }
 }
+

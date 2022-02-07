@@ -1,0 +1,62 @@
+.comment {
+  margin-top: 0;
+  margin-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  legend {
+    font-size: 24px;
+    line-height: 24px;
+    color: $color-black;
+    font-weight: 400;
+    margin-bottom: 38px;
+    margin-left: -4px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 36px;
+      line-height: 36px;
+      margin-bottom: 75px;
+    }
+  }
+}
+
+.comment__field {
+  min-width: 200px;
+  width: 100%;
+  padding: 8px 12px 13px;
+  box-sizing: border-box;
+  border: 1px solid $color-special-grey-3;
+
+  @include form_text;
+
+  @media (min-width: $tablet-width) {
+    padding: 19px 15px;
+    height: 174px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 16px;
+  }
+
+  &::placeholder {
+    color: $color-special-dark-grey;
+    opacity: 1;
+  }
+
+  &:valid:hover {
+    border-color: $color-special-grey-7;
+  }
+
+  &:valid:focus {
+    border-color: $color-special-dark-grey;
+    border-width: 2px;
+    outline: none;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border-color: $color-red;
+    border-width: 2px;
+  }
+}

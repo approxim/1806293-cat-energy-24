@@ -81,7 +81,7 @@
   }
 }
 
-.footer-social__icon {
+.footer__social-icon {
   padding: 8px;
   display: flex;
   align-items: center;
@@ -100,28 +100,28 @@
   }
 }
 
-.footer-social__icon .logo-vk {
+.footer__social-icon .logo-vk {
   @media (min-width: $tablet-width) {
     width: 30px;
     height: 22px;
   }
 }
 
-.footer-social__icon .logo-insta {
+.footer__social-icon .logo-insta {
   @media (min-width: $tablet-width) {
     width: 23px;
     height: 23px;
   }
 }
 
-.footer-social__icon .logo-facebook {
+.footer__social-icon .logo-facebook {
   @media (min-width: $tablet-width) {
     width: 16px;
     height: 30px;
   }
 }
 
-.htmlacademy-link {
+.footer__htmlacademy-link {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -146,7 +146,7 @@
   }
 }
 
-.htmlacademy-link__text {
+.footer__htmlacademy-text {
   font-family: $font-secondary;
   font-size: 16px;
   line-height: 18px;

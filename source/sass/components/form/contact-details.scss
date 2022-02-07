@@ -1,0 +1,98 @@
+// fieldset Контакты
+.contact-details {
+  margin-top: 23px;
+  margin-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 72px;
+    margin-bottom: 71px;
+  }
+
+  legend {
+    font-size: 24px;
+    line-height: 24px;
+    color: $color-black;
+    font-weight: 400;
+    margin-bottom: 37px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 36px;
+      line-height: 36px;
+      margin-bottom: 77px;
+    }
+  }
+
+  input {
+    @include form_input;
+    @include form_text;
+
+    &:valid + img {
+      fill: $color-basic-green;
+    }
+  }
+}
+
+.contact-details__icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &--tel {
+    right: 13px;
+
+    @media (min-width: $tablet-width) {
+      right: 17px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    right: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 20px;
+  }
+}
+
+.contact-details__item {
+  color: $color-special-dark-grey;
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+  position: relative;
+
+  @include form_text;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 50%;
+  }
+
+  span {
+    margin-right: 13px;
+    white-space: nowrap;
+
+    @media (min-width: $desktop-width) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.program-form .contact-details {
+  margin: 28px 0 13px -2px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 72px;
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+  }
+}
