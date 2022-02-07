@@ -5,7 +5,7 @@
     margin-top: 80px;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     width: 50%;
     margin-top: 0;
   }
@@ -28,7 +28,7 @@
     width: auto;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     margin: -40px 0 0 20px;
   }
 }
@@ -45,7 +45,7 @@
     margin-top: 35px;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     padding: 0 7px 0 22px;
     margin-top: 30px;
     margin-left: 10px;

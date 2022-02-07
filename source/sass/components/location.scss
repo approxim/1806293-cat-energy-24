@@ -1,5 +1,5 @@
 .location {
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     height: 400px;
     position: relative;
   }
@@ -20,7 +20,7 @@
     padding: 56px 70px;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     position: absolute;
     z-index: 1000;
     width: 565px;
@@ -65,7 +65,7 @@
     text-align: right;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     text-align: left;
   }
 
@@ -85,7 +85,7 @@
     height: 400px;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     height: 400px;
   }
 

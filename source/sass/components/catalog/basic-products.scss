@@ -18,7 +18,7 @@
     margin-top: 80px;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
     row-gap: 144px;
@@ -50,7 +50,7 @@
     }
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     padding: 0 39px 0;
   }
 
@@ -110,7 +110,7 @@
       margin-bottom: 0;
     }
 
-    @media (min-width: $desctop-width) {
+    @media (min-width: $desktop-width) {
       margin-bottom: 5px;
     }
   }
@@ -142,7 +142,7 @@
     }
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 5px;
   }
 }

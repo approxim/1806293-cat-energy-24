@@ -125,7 +125,8 @@ const server = (done) => {
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/*.js', gulp.series(scripts));
-  gulp.watch('source/*.html', gulp.series(html, reload));
+  // gulp.watch('source/*.html', gulp.series(html, reload));
+  gulp.watch('source/*.html').on('change', browser.reload);
 }
 
 
@@ -147,24 +148,24 @@ export const build = gulp.series(
 );
 
 
-// export default gulp.series(
-//   html, styles, server, watcher
-// );
-
 export default gulp.series(
-  clean,
-  copyImages,
-  copy,
-  gulp.parallel(
-    styles,
-    html,
-    scripts,
-    logo,
-    svg,
-    sprite,
-    createWebp
-  ),
-  gulp.series(
-    server,
-    watcher
-  ));
+  html, styles, server, watcher
+);
+
+// export default gulp.series(
+//   clean,
+//   copyImages,
+//   copy,
+//   gulp.parallel(
+//     styles,
+//     html,
+//     scripts,
+//     logo,
+//     svg,
+//     sprite,
+//     createWebp
+//   ),
+//   gulp.series(
+//     server,
+//     watcher
+//   ));

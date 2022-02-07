@@ -9,7 +9,7 @@
     height: 850px;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     height: 694px;
   }
 }
@@ -19,7 +19,7 @@
     padding: 0 117px;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     padding: 0 190px;
   }
 }
@@ -40,7 +40,7 @@
     display: none;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     display: block;
     background-image: url("../../../img/images/photo/cat-promo-desktop.jpg");
     background-repeat: no-repeat;
@@ -78,7 +78,7 @@
     margin-top: 42px;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     justify-content: center;
     flex-flow: column;
   }
@@ -95,7 +95,7 @@
     order: 4;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     order: 0;
   }
 }
@@ -152,7 +152,7 @@
     margin: 53px 0 0 3px;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     order: 4;
     margin: 55px 0 7px 0;
   }
@@ -175,7 +175,7 @@
     z-index: -1;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     position: absolute;
     width: auto;
     height: 499px;
