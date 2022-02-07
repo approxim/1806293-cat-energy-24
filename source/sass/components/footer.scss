@@ -69,6 +69,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    margin-left: 15px;
   }
 
   a:not(:last-child) {
@@ -97,12 +98,26 @@
   &:active svg {
     opacity: 0.3;
   }
+}
 
+.footer-social__icon .logo-vk {
   @media (min-width: $tablet-width) {
-    &:nth-of-type(1) {
-      width: 30px;
-      height: 22px;
-    }
+    width: 30px;
+    height: 22px;
+  }
+}
+
+.footer-social__icon .logo-insta {
+  @media (min-width: $tablet-width) {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.footer-social__icon .logo-facebook {
+  @media (min-width: $tablet-width) {
+    width: 16px;
+    height: 30px;
   }
 }
 

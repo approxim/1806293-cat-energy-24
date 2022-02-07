@@ -1,5 +1,5 @@
 .present {
-  background-image: url("../../../img/photo/cat-present-mobile.jpg");
+  background-image: url("../../../img/images/photo/cat-present-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% auto;
@@ -9,28 +9,28 @@
   margin-top: 55px;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../../img/photo/cat-present-mobile-2x.jpg");
+    background-image: url("../../../img/images/photo/cat-present-mobile-2x.jpg");
   }
 
   @media (min-width: $tablet-width) {
     height: 200px;
-    background-image: url("../../../img/photo/cat-present-tablet.jpg");
+    background-image: url("../../../img/images/photo/cat-present-tablet.jpg");
     background-size: auto 100%;
     margin-top: 68px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../../img/photo/cat-present-tablet-2x.jpg");
+      background-image: url("../../../img/images/photo/cat-present-tablet-2x.jpg");
     }
   }
 
   @media (min-width: $desctop-width) {
     height: 290px;
-    background-image: url("../../../img/photo/cat-present-desktop.jpg");
+    background-image: url("../../../img/images/photo/cat-present-desktop.jpg");
     background-size: 100% auto;
     margin-top: 0;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../../img/photo/cat-present-desktop-2x.jpg");
+      background-image: url("../../../img/images/photo/cat-present-desktop-2x.jpg");
     }
   }
 
