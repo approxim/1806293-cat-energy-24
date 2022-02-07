@@ -14,4 +14,3 @@ if (navMain.classList.contains("nav--closed")) {
   navMain.classList.add("nav--closed");
 }
 });
-
