@@ -72,8 +72,8 @@
           </div> <!-- /promo__wrapper -->
 
           <picture>
-            <source media="(min-width: 768px)" srcset="img/images/photo/pack-promo-tablet.png 1x, img/images/photo/pack-promo-tablet-2x.png 2x">
-            <img class="promo__pack" src="img/images/photo/pack-promo-mobile.png" srcset="img/images/photo/pack-promo-mobile-2x.png 2x" width="280" height="270" alt="упаковка корма">
+            <source media="(min-width: 768px)" srcset="img/photo/pack-promo-tablet.png 1x, img/photo/pack-promo-tablet-2x.png 2x">
+            <img class="promo__pack" src="img/photo/pack-promo-mobile.png" srcset="img/photo/pack-promo-mobile-2x.png 2x" width="280" height="270" alt="упаковка корма">
           </picture>
         </section> <!-- /Секция Промо -->
 
@@ -165,9 +165,9 @@
           <div class="result">
             <div class="result__item">
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/images/photo/cat-result-desktop.png 1x, img/images/photo/cat-result-desktop-2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/images/photo/cat-result-tablet.png 1x, img/images/photo/cat-result-tablet-2x.png 2x">
-                <img class="result__image fat-cat" src="img/images/photo/cat-result-mobile.png" srcset="img/images/photo/cat-result-mobile-2x.png 2x" width="280" height="232" alt="кот до приема правильного корма и после">
+                <source media="(min-width: 1440px)" srcset="img/photo/cat-result-desktop.png 1x, img/photo/cat-result-desktop-2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/photo/cat-result-tablet.png 1x, img/photo/cat-result-tablet-2x.png 2x">
+                <img class="result__image fat-cat" src="img/photo/cat-result-mobile.png" srcset="img/photo/cat-result-mobile-2x.png 2x" width="280" height="232" alt="кот до приема правильного корма и после">
               </picture>
             </div>
             <div class="result__buttons">
@@ -241,7 +241,24 @@
       </a>
     </footer>
 
-      <script src="js/toggle.js"></script>
+    <script>
+      let navMain = document.querySelector(".nav");
+      let navToggle = document.querySelector(".nav__toggle");
+
+      navToggle.onclick = function (evt) {
+        evt.preventDefault();
+      }
+
+      navToggle.addEventListener("click", function() {
+        if (navMain.classList.contains("nav--closed")) {
+          navMain.classList.remove("nav--closed");
+          navMain.classList.add("nav--opened");
+        } else {
+          navMain.classList.remove("nav--opened");
+          navMain.classList.add("nav--closed");
+        }
+      });
+    </script>
 
   </body>
 </html>
