@@ -29,11 +29,11 @@ main {
   overflow: hidden;
 
   @media (min-width: $tablet-width) {
-    max-width: $desctop-width - 1px;
+    max-width: $desktop-width - 1px;
     padding: 0 30px;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     max-width: 100%;
     padding: 0 110px;
   }
@@ -44,7 +44,7 @@ main {
     padding: 0 70px;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     padding: 0 110px;
   }
 }
@@ -119,23 +119,6 @@ main {
   }
 }
 
-// @mixin green-line {
-//   position: relative;
-//   background-color: $color-white;
-//   padding-right: 22px;
-
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     height: 2px;
-//     width: 100vw;
-//     background-color: $color-basic-green;
-//     left: 20px;
-//     top: 60%;
-//     z-index: -1;
-//   }
-// }
-
 .main__title {
   font-weight: 400;
   font-size: 36px;
@@ -155,65 +138,13 @@ main {
     }
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     margin-top: 188px;
   }
 }
 
-// green-line
-// .green-line {
-//   position: relative;
-//   background-color: $color-white;
-//   padding-right: 35px;
-//   display: inline-block;
-//   vertical-align: baseline;
-//   margin: 0;
 
-  // @media (min-width: $tablet-width) {
-  //   padding-left: 22px;
-  // }
-// }
-
-// .green-line::before,
-// .green-line::after {
-//   content: "";
-//   position: absolute;
-//   display: block;
-//   top: 0;
-//   width: 100vw;
-//   height: 2px;
-//   margin-top: calc(1em - 14px);
-//   background-color: $color-basic-green;
-//   z-index: -1;
-// }
-
-// .green-line::before {
-//   display: none;
-
-//   @media (min-width: $tablet-width) {
-//     display: block;
-//     right: 100%;
-//     margin-right: 39px;
-//   }
-
-//   @media (min-width: $desctop-width) {
-//     margin-right: 37px;
-//   }
-// }
-
-// .green-line::after {
-//   left: 0;
-  // margin-left: 40px;
-// }
-//
-
-
-
-
-
-
-
-
+// Зеленая линия вокруг заголовков
 .green-line {
   z-index: 3;
   background-color: $color-white;
@@ -246,7 +177,7 @@ main {
     left: 0;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     width: calc(100% + 75px);
     left: -40px;
   }
