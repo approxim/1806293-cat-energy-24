@@ -66,16 +66,6 @@ const svg = () =>
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 
-const sprite = () => {
-  return gulp.src('source/img/**/*.svg')
-    .pipe(svgo())
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img'));
-}
-
 // Copy
 const copy = (done) => {
   gulp.src([
@@ -130,7 +120,6 @@ export const build = gulp.series(
     html,
     scripts,
     svg,
-    sprite,
     createWebp
   ),
 );
@@ -145,7 +134,6 @@ export default gulp.series(
     html,
     scripts,
     svg,
-    sprite,
     createWebp,
   ),
   gulp.series(
